@@ -61,8 +61,8 @@ ___
 * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 ## LOCAL DEVELOPMENT
 ### Clone Repository
-1. Login/Sign up to [GitHub]([GitHub](https://github.com/)
-2. Go to the project repository [Math-Game]([2ndborn/math-game](https://github.com/2ndborn/math-game)
+1. Login/Sign up to [GitHub](https://github.com/)
+2. Go to the project repository [Math-Game](https://github.com/2ndborn/math-game)
 3. Click on the green code button, select whether you would like to clone with **HTTPS**, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory. ls (list the files and folder) cd <name of location/directory>(change directory)
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
