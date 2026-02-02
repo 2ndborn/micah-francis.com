@@ -41,7 +41,7 @@ ___
 ## Wireframes
 |Home|About me|Portfolio|
 |-|-|-|
-|![Home]()|![About]()|![Portfolio]()|
+|![Home](./docs/assets/home.webp)|![About](./docs/assets/about.webp)|![Portfolio](./docs/assets/portfolio.webp)|
 ## Technologies
 ### `Resources`
 * HTML
@@ -72,4 +72,3 @@ ___
 3. Go to pages, located on the left under **Code and automation.**
 4. Under **Branch** switch from **None** to **Main**, then save.
 5. You should now see the site address at the top of the page.
-> Written with [StackEdit](https://stackedit.io/).
