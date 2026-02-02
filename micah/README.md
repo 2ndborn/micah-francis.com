@@ -1,4 +1,4 @@
-# micah-francis.com
+# Micah Francis
 ## User Stories
 ### `Navigation`
 -   I want to navigate between the Home, About Me, and Portfolio pages so that I can freely explore the site.
@@ -39,18 +39,16 @@ ___
 |BBH Hegarty|✅|-|
 |Noto sans|-|✅|
 ## Wireframes
-
 | Home | About me | Portfolio |
 |---|---|---|
 |![Home](./docs/assets/home.webp)|![About](./docs/assets/about.webp)|![Portfolio](./docs/assets/portfolio.webp)|
-
 ## Technologies
 ### `Resources`
 * HTML
 * CSS
 * Javascript
 * VSCode
-* [React.js](https://react.dev/)
+* [Vite](https://vite.dev/)
 * [React Router](https://v5.reactrouter.com/web/guides/quick-start)
 * [Motion — JavaScript & React animation library](https://motion.dev/)
 * Microsoft Copilot
@@ -61,16 +59,36 @@ ___
 * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 ## LOCAL DEVELOPMENT
 ### Clone Repository
-1. Login/Sign up to [GitHub](https://github.com/)
-2. Go to the project repository [Math-Game](https://github.com/2ndborn/math-game)
+1. Login/Sign up to [GitHub]([GitHub](https://github.com/)
+2. Go to the project repository [Math-Game]([2ndborn/math-game](https://github.com/2ndborn/math-game)
 3. Click on the green code button, select whether you would like to clone with **HTTPS**, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory. ls (list the files and folder) cd <name of location/directory>(change directory)
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
-6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
-7. Run the server:
+6. Install Vite: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+	  <pre><code>
+	  npm create vite@latest
+	  </code></pre>
+	</div>
+7. Pick a project name: micah-francis.com
+8. Select a variable: For this project pick JavaScript + SWC
+9. Lauch the React app in the browser: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+	  <pre><code>
+		cd micah-francis.com
+		npm run dev
+	  </code></pre>
+	</div>
+10. You should see the following: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+	  <pre><code>
+	  ➜ Local: http://localhost:5173/ 
+	  ➜ Network: use --host to expose 
+	  ➜ press h + enter to show help
+	  *Click the Local: link to open the browswer*
+	  </code></pre>
+	</div>
 ## Deployment
-1. Go to the project repository [Math-Game]([2ndborn/math-game](https://github.com/2ndborn/math-game)
+1. Go to the project repository [micah-francis.com](https://github.com/2ndborn/micah-francis.com/tree/main)
 2. Go to settings, located at the top.
 3. Go to pages, located on the left under **Code and automation.**
 4. Under **Branch** switch from **None** to **Main**, then save.
 5. You should now see the site address at the top of the page.
+> Written with [StackEdit](https://stackedit.io/).
