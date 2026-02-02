@@ -39,9 +39,10 @@ ___
 |BBH Hegarty|✅|-|
 |Noto sans|-|✅|
 ## Wireframes
-|Home|About me|Portfolio|
+| Home | About me | Portfolio |
 |-|-|-|
-|![Home](./docs/assets/home.webp)|![About](./docs/assets/about.webp)|![Portfolio](./docs/assets/portfolio.webp)|
+| ![Home](./docs/assets/home.webp) | ![About](./docs/assets/about.webp) | ![Portfolio](./docs/assets/portfolio.webp) |
+
 ## Technologies
 ### `Resources`
 * HTML
