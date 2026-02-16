@@ -1,0 +1,22 @@
+    .introDisplay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "BBH Hegarty", sans-serif;
+        font-size: clamp(1.3rem, 1.045rem + 1.27vw, 2rem);
+        color: hsl(0, 0%, 95%);;
+        height: 70%;
+        min-width: 75%;
+        background-color: hsl(0, 0%, 93%);
+        border-radius: 10px;
+        /* text-shadow: 2px 2px 4px rgba(0,0,0,0.7); */
+        box-shadow: none;
+        /* transition: box-shadow 1s ease; */
+        padding: min(1.5rem, 5%);
+    }
+
+    .introDisplay h1, .introDisplay h3 {
+        margin: 5px 0;
+    }
