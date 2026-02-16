@@ -1,11 +1,11 @@
 :root {
     --cta-btn: #8F008F;
-    --other-color: #4D054C;
-    --font-color: #0A0908;
+    --font-primary: #4D054C;
+    --font-secondary: #0A0908;
     --body-color: #F2F4F3;
 }
 
 body {
     background-color: var(--body-color);
-    color: var(--font-color);
+    color: var(--font-primary);
 }

@@ -22,9 +22,9 @@ const NavBar = () => {
         className={isOpen ? styles.menuOpen : styles.menu}
       >
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/gallery">Gallery</NavLink></li>
+          <li><NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink></li>
+          <li><NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>About</NavLink></li>
+          <li><NavLink to="/gallery" className={({isActive}) => (isActive ? styles.active : "")}>Gallery</NavLink></li>
         </ul>
       </div>
       <div
