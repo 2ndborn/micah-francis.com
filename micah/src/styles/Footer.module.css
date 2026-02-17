@@ -30,9 +30,9 @@
 }
 
 .upperFooter button:hover {
-    border: 3px solid var(--cta-secondary);
+    border: 2px solid var(--cta-secondary);
     color: var(--cta-secondary);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .lower {
@@ -46,4 +46,36 @@
 
 .lower i {
     margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .footerContainer {
+        height: 75vh;
+    }
+
+    .footerContainer h2 {
+        margin-bottom: 0;
+    }
+
+    .upperFooter {
+        height: 50%;
+    }
+
+    .upperFooter button {
+        font-size: 0;
+        min-width: 0;
+        margin-right: 0;
+        padding: 0.5rem;
+    }
+
+    .upperFooter button i {
+        font-size: 1.5rem;
+    }
+
+    .lower {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
 }

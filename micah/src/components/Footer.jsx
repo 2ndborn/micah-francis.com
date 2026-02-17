@@ -1,9 +1,24 @@
-import React from 'react'
-import styles from '../styles/Footer.module.css'
+import React from 'react';
+import {motion} from 'framer-motion';
+import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
+    const container = {
+        hidden: { opacity: 0, y: 20 },
+        show: {
+            opacity: 1, y: 0,
+            transition: {
+                duration: 1.5,
+                ease: "easeOut"
+            }
+        }
+    }
     return (
-        <div className={styles.footerContainer}>
+        <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className={styles.footerContainer}>
             <h2 style={{ textAlign: "center" }}>Contact</h2>
             <div className={styles.upperFooter}>
                 <button>WhatsApp<i class="fa-brands fa-whatsapp"></i></button>
@@ -25,7 +40,7 @@ const Footer = () => {
                     07900 567 891
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
