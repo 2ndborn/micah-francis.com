@@ -2,6 +2,7 @@ import NavBar from './components/NavBar';
 import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.css'
 import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <Route exact path='/about' element={<h1>About page</h1>} />
           <Route exact path='/gallery' element={<h1>Gallery page</h1>} />
         </Routes>
+        <Footer />
       </div>
   )
 }

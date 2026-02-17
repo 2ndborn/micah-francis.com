@@ -1,0 +1,49 @@
+.footerContainer {
+    height: 50vh;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-image: linear-gradient(to bottom, var(--body-color), hsl(0, 0%, 92%));
+}
+
+.upperFooter {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upperFooter button {
+    font-size: 1.1rem;
+    min-width: 150px;
+    padding: 0.5rem 1rem;
+    color: var(--font-primary);
+    background-color: hsl(0, 0%, 97%);
+    border: 2px solid var(--font-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.upperFooter button i {
+    margin-left: 5px;
+}
+
+.upperFooter button:hover {
+    border: 3px solid var(--cta-secondary);
+    color: var(--cta-secondary);
+    transform: scale(1.05);
+}
+
+.lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10%;
+    gap: 1rem;
+}
+
+.lower i {
+    margin-right: 10px;
+}

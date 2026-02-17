@@ -1,5 +1,6 @@
 :root {
     --cta-btn: #8F008F;
+    --cta-secondary: hsl(300, 100%, 50%);
     --font-primary: #4D054C;
     --font-secondary: #0A0908;
     --body-color: #F2F4F3;
