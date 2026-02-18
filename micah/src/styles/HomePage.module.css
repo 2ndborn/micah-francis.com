@@ -20,3 +20,22 @@
     .introDisplay h1, .introDisplay h3 {
         margin: 5px 0;
     }
+
+    .infiniteScroll {
+        display: flex;
+        width: max-content;
+        height: 75%;
+        /* box-shadow: inset 2px 2px 4px var(--cta-btn); */
+        animation: scroll 15s linear infinite;
+    }
+
+    .items {
+        width: 50vw;
+        text-align: center;
+        background-color: grey;
+    }
+
+    @keyframes scroll {
+        0% {transform: translateX(0);}
+        100% {transform: translateX(-50%);}
+    }

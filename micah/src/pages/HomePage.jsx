@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {motion} from 'framer-motion';
 import styles from '../styles/HomePage.module.css'
 
 const HomePage = () => {
+  const ref = useRef(null);
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    if(ref.current){
+      setWidth(ref.current.scrollWidth / 2)
+    }
+  }, [])
+
   const container = {
     hidden: {opacity: 0, boxShadow: "none"},
     show: {
@@ -44,6 +52,8 @@ const HomePage = () => {
     }
   }
 
+  const symbols = [1,2,3,4];
+
   return (
     <div>
       <section style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -56,6 +66,15 @@ const HomePage = () => {
           <motion.h1 variants={text}>Micah Francis</motion.h1>
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
+      </section>
+      <section style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <div style={{height: "90%", width: "80%", display: "flex", alignItems: "center", overflow: "hidden"}}>
+        <div className={styles.infiniteScroll}>
+          {symbols.concat(symbols).map((sym, i) =>
+            <div key={i} className={styles.items}>{sym}</div>
+          )}
+        </div>
+        </div>
       </section>
     </div>
   )
