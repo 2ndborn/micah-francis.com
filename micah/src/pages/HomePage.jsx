@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion';
-import styles from '../styles/HomePage.module.css'
+import styles from '../styles/HomePage.module.css';
+import NatWestIcon from '../components/NatwestIcon';
+import Metro from '../components/Metro';
+import Civil from '../components/CivilSer'
+import CivilSer from '../components/CivilSer';
+import South from '../components/South';
 
 const HomePage = () => {
   const ref = useRef(null)
@@ -52,7 +57,11 @@ const HomePage = () => {
     }
   }
 
-  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>];
+  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>, <NatWestIcon className={styles.icon} />,
+    <Metro className={styles.icon} />,
+    <CivilSer className={styles.icon} />,
+    <South className={styles.iconTwo} />
+  ];
 
   return (
     <div>
@@ -71,7 +80,7 @@ const HomePage = () => {
         <motion.div style={{opacity: opacityTwo}} className={styles.scrollContainer}>
         <motion.div style={{opacity}} className={styles.scrollOverlay}>
           <p>Qualified developer providing freelance and employment services. Checkout my porfolio.</p>
-          <button>Portfolio</button>
+          <button className={styles.ctaBtn}>Portfolio</button>
         </motion.div> 
           <div className={styles.infiniteScroll}>
             {symbols.concat(symbols).map((sym, i) =>
