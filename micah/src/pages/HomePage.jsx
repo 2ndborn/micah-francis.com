@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
-import {motion} from 'framer-motion';
+import {motion, useScroll, useTransform} from 'framer-motion';
 import styles from '../styles/HomePage.module.css'
 
 const HomePage = () => {
-  const ref = useRef(null);
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    if(ref.current){
-      setWidth(ref.current.scrollWidth / 2)
-    }
-  }, [])
+  const ref = useRef(null)
+  const {scrollYProgress} = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
 
+  const opacity = useTransform(scrollYProgress, [0.25, 0.7, 0.95], [0,1,0])
+  const opacityTwo = useTransform(scrollYProgress, [0.1, 0.7, 0.99], [0,1,0])
   const container = {
     hidden: {opacity: 0, boxShadow: "none"},
     show: {
@@ -52,7 +52,7 @@ const HomePage = () => {
     }
   }
 
-  const symbols = [1,2,3,4];
+  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>];
 
   return (
     <div>
@@ -67,14 +67,18 @@ const HomePage = () => {
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
       </section>
-      <section style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
-        <div style={{height: "90%", width: "80%", display: "flex", alignItems: "center", overflow: "hidden"}}>
-        <div className={styles.infiniteScroll}>
-          {symbols.concat(symbols).map((sym, i) =>
-            <div key={i} className={styles.items}>{sym}</div>
-          )}
-        </div>
-        </div>
+      <section ref={ref} style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <motion.div style={{opacity: opacityTwo}} className={styles.scrollContainer}>
+        <motion.div style={{opacity}} className={styles.scrollOverlay}>
+          <p>Qualified developer providing freelance and employment services. Checkout my porfolio.</p>
+          <button>Portfolio</button>
+        </motion.div> 
+          <div className={styles.infiniteScroll}>
+            {symbols.concat(symbols).map((sym, i) =>
+              <div key={i} className={styles.items}>{sym}</div>
+            )}
+          </div>
+        </motion.div>
       </section>
     </div>
   )
