@@ -3,19 +3,19 @@ import {motion, useScroll, useTransform} from 'framer-motion';
 import styles from '../styles/HomePage.module.css';
 import NatWestIcon from '../components/NatwestIcon';
 import Metro from '../components/Metro';
-import Civil from '../components/CivilSer'
 import CivilSer from '../components/CivilSer';
 import South from '../components/South';
+import InfiniteScroll from '../components/InfiniteScroll';
 
 const HomePage = () => {
-  const ref = useRef(null)
-  const {scrollYProgress} = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
+  // const ref = useRef(null)
+  // const {scrollYProgress} = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"]
+  // });
 
-  const opacity = useTransform(scrollYProgress, [0.25, 0.7, 0.95], [0,1,0])
-  const opacityTwo = useTransform(scrollYProgress, [0.1, 0.7, 0.99], [0,1,0])
+  // const opacity = useTransform(scrollYProgress, [0.25, 0.7, 0.95], [0,1,0])
+  // const opacityTwo = useTransform(scrollYProgress, [0.1, 0.7, 0.99], [0,1,0])
   const container = {
     hidden: {opacity: 0, boxShadow: "none"},
     show: {
@@ -57,11 +57,26 @@ const HomePage = () => {
     }
   }
 
-  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>, <NatWestIcon className={styles.icon} />,
+  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>];
+
+  const employ =[<NatWestIcon className={styles.icon} />,
     <Metro className={styles.icon} />,
     <CivilSer className={styles.icon} />,
-    <South className={styles.iconTwo} />
-  ];
+    <South className={styles.icon} />
+  ]
+
+  const content = [
+    {
+      paragraph: "Qualified developer providing freelance and employment services. Checkout my porfolio:",
+      button: "Portfolio"
+    },
+    {
+      paragraph: "With over 2 decades of experience in people management in a ranges of industries. Find out more:",
+      button: "About me"
+    }
+  ]
+
+  const [sectionOne, sectionTwo] = content;
 
   return (
     <div>
@@ -76,18 +91,9 @@ const HomePage = () => {
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
       </section>
-      <section ref={ref} style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <motion.div style={{opacity: opacityTwo}} className={styles.scrollContainer}>
-        <motion.div style={{opacity}} className={styles.scrollOverlay}>
-          <p>Qualified developer providing freelance and employment services. Checkout my porfolio.</p>
-          <button className={styles.ctaBtn}>Portfolio</button>
-        </motion.div> 
-          <div className={styles.infiniteScroll}>
-            {symbols.concat(symbols).map((sym, i) =>
-              <div key={i} className={styles.items}>{sym}</div>
-            )}
-          </div>
-        </motion.div>
+      <section style={{position: "relative"}}>    
+        <InfiniteScroll icons={symbols} content={sectionOne} />
+        <InfiniteScroll icons={employ} content={sectionTwo} />
       </section>
     </div>
   )

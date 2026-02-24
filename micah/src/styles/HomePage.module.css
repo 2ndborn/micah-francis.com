@@ -23,8 +23,8 @@
 
 .scrollContainer {
     position: relative;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     background-color: hsl(0, 0%, 93%);
@@ -45,7 +45,8 @@
     font-weight: 500;
     line-height: 1.5;
     box-shadow: inset 0px 2px 12px var(--cta-btn), inset 2px 0px 12px rgba(204, 0, 204, 0.7);
-    z-index: 1;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 .infiniteScroll {
@@ -66,12 +67,11 @@
     font-size: clamp(5rem, 3.182rem + 9.09vw, 10rem);
     color: hsl(0, 0%, 85%);
     text-align: center;
-    z-index: -1;
 }
 
 @keyframes scroll {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(-50%);}
+    0% {transform: translateX(-50%);}
+    100% {transform: translateX(0);}
 }
 
 .ctaBtn {
