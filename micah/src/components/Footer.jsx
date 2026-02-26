@@ -21,10 +21,10 @@ const Footer = () => {
         className={styles.footerContainer}>
             <h2 style={{ textAlign: "center" }}>Contact</h2>
             <div className={styles.upperFooter}>
-                <button>WhatsApp<i class="fa-brands fa-whatsapp"></i></button>
-                <button>Email<i class="fa-regular fa-envelope"></i></button>
-                <button>LinkedIn<i class="fa-brands fa-linkedin"></i></button>
-                <button>GitHub<i class="fa-brands fa-github"></i></button>
+                <button>WhatsApp<i className="fa-brands fa-whatsapp"></i></button>
+                <button>Email<i className="fa-regular fa-envelope"></i></button>
+                <button>LinkedIn<i className="fa-brands fa-linkedin"></i></button>
+                <button>GitHub<i className="fa-brands fa-github"></i></button>
             </div>
             <div className={styles.lower}>
                 <div style={{ flex: 1, minWidth: '120px' }}>

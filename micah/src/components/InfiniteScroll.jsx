@@ -1,36 +1,58 @@
-import React, { useRef } from 'react'
-import {motion, useScroll, useTransform} from 'framer-motion';
+import React, { useEffect, useRef } from 'react'
+import {motion, useAnimation, useInView} from 'framer-motion';
 import styles from '../styles/HomePage.module.css';
-import NatWestIcon from '../components/NatwestIcon';
-import Metro from '../components/Metro';
 
-const InfiniteScroll = ({icons, content}) => {
-    const ref = useRef(null)
-      const {scrollYProgress} = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-      });
-    
-      const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0,1,0])
-      const opacityTwo = useTransform(scrollYProgress, [0.1, 0.7, 0.99], [0,1,0])
+const InfiniteScroll = ({ icons, content, x = "-100%" }) => {
+    const ref = useRef(null);
+    const inView = useInView(ref, {once: false});
+    const mainControls = useAnimation();
+    const contentControls = useAnimation();
+
+    const container = {
+        hidden: { opacity: 0, x: x },
+        visible: { opacity: 1, x: 0 }
+    }
+
+    const contents = {
+        hidden: {opacity: 0, y: 20},
+        visible: {opacity: 1, y: 0}
+    }
+
+    useEffect(() => {
+        if (inView) {
+            mainControls.start("visible")
+            contentControls.start("visible")
+        }
+    }, [inView, mainControls, contentControls])
 
     return (
-        <div style={{ height: "200vh", display: "flex", justifyContent: "center", margin: "60px 0" }}>
-            <div style={{height: "50vh"}} />
-            <motion.div ref={ref} style={{position: "sticky", top: 60, height: "75vh", width: "75vw"}}>
-                <motion.div className={styles.scrollContainer}>
-                    <div className={styles.infiniteScroll}>
-                        {icons.concat(icons).map((icon, i) =>
-                            <div key={i} className={styles.items}>{icon}</div>
-                        )}
-                    </div>
-                    <motion.div style={{opacity}} className={styles.scrollOverlay}>
-                        <p>{content.paragraph}</p>
-                        <button className={styles.ctaBtn}>{content.button}</button>
-                    </motion.div>
-                </motion.div>
+        <div ref={ref} className={styles.cardContainer}>
+            <motion.div
+            variants={container}
+            initial="hidden"
+            animate={mainControls}
+            transition={{duration: 1, delay: 0.5}}
+            className={styles.scrollContainer}>
+                <div className={styles.infiniteScroll}>
+                    {icons.concat(icons).map((icon, i) =>
+                        <div key={i} className={styles.items}>{icon}</div>
+                    )}
+                </div>
+                <div className={styles.scrollOverlay}>
+                    <motion.p
+                    variants={contents}
+                    initial="hidden"
+                    animate={contentControls}
+                    transition={{duration: 0.5, delay: 1}}
+                    >{content.paragraph}</motion.p>
+                    <motion.button
+                    variants={contents}
+                    initial="hidden"
+                    animate={contentControls}
+                    transition={{duration: 0.5, delay: 1.5}}
+                    className={styles.ctaBtn}>{content.button}</motion.button>
+                </div>
             </motion.div>
-            <div style={{height: "50vh"}} />
         </div>
     )
 }

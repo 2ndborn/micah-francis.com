@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import {motion, useScroll, useTransform} from 'framer-motion';
 import styles from '../styles/HomePage.module.css';
 import NatWestIcon from '../components/NatwestIcon';
@@ -6,16 +6,9 @@ import Metro from '../components/Metro';
 import CivilSer from '../components/CivilSer';
 import South from '../components/South';
 import InfiniteScroll from '../components/InfiniteScroll';
+import Reveal from '../utils/Reveal';
 
 const HomePage = () => {
-  // const ref = useRef(null)
-  // const {scrollYProgress} = useScroll({
-  //   target: ref,
-  //   offset: ["start end", "end start"]
-  // });
-
-  // const opacity = useTransform(scrollYProgress, [0.25, 0.7, 0.95], [0,1,0])
-  // const opacityTwo = useTransform(scrollYProgress, [0.1, 0.7, 0.99], [0,1,0])
   const container = {
     hidden: {opacity: 0, boxShadow: "none"},
     show: {
@@ -57,7 +50,7 @@ const HomePage = () => {
     }
   }
 
-  const symbols = [<i class="fa-brands fa-html5"></i>,<i class="fa-brands fa-css3-alt"></i>,<i class="fa-brands fa-js"></i>,<i class="fa-brands fa-python"></i>];
+  const symbols = [<i className="fa-brands fa-html5"></i>,<i className="fa-brands fa-css3-alt"></i>,<i className="fa-brands fa-js"></i>,<i className="fa-brands fa-python"></i>];
 
   const employ =[<NatWestIcon className={styles.icon} />,
     <Metro className={styles.icon} />,
@@ -67,12 +60,12 @@ const HomePage = () => {
 
   const content = [
     {
-      paragraph: "Qualified developer providing freelance and employment services. Checkout my porfolio:",
-      button: "Portfolio"
+      paragraph: "Qualified developer providing freelance and employment services.",
+      button: "See Portfolio"
     },
     {
-      paragraph: "With over 2 decades of experience in people management in a ranges of industries. Find out more:",
-      button: "About me"
+      paragraph: "With over 2 decades of experience in people management in a ranges of industries.",
+      button: "See About Me"
     }
   ]
 
@@ -91,11 +84,12 @@ const HomePage = () => {
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
       </section>
-      <section style={{position: "relative"}}>    
+      <section className={styles.secTwo}>
         <InfiniteScroll icons={symbols} content={sectionOne} />
-        <InfiniteScroll icons={employ} content={sectionTwo} />
+        <InfiniteScroll icons={employ} content={sectionTwo} x='100%' />
       </section>
     </div>
+    
   )
 }
 
