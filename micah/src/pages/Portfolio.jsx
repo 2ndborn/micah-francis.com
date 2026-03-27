@@ -67,19 +67,20 @@ const Portfolio = () => {
             <motion.div
               key={i}
               style={{
+                position: 'relative',
                 height: "100%", width: "100%",
-                flexShrink: 0, backgroundColor: "lightblue",
+                flexShrink: 0, backgroundColor: "black",
                 boxSizing: 'border-box',
                 border: "2px solid black", 
                 borderRadius: "10px",
-                perspective: '1000px',
+                perspective: '200px',
                 overflow: 'hidden'
               }}
               animate={{ scale: index === i ? 0.95 : 0.85 }}
               transition={SPRING_OPTIONS}
             >
-              <h1>{ext.name}</h1>
-              <img style={{objectFit: 'cover', height: '100%', width: '100%', transform: 'rotateX(45deg) rotateY(-30deg)', transformStyle: 'preserve-3d'}} src={ext.image} alt="" />
+              <img style={{position: 'absolute', top: '200px', left: '0px', height: '100%', width: '100%', transform: 'rotateX(45deg) rotateY(-20deg) rotateZ(-25deg)', transformStyle: 'preserve-3d'}} src={ext.image} alt="" />
+              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(158deg, #ffffff 40%, transparent 100%)" }} />
             </motion.div>
           ))}
 
