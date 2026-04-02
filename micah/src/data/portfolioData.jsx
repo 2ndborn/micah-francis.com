@@ -1,5 +1,7 @@
-import hairIsArt from '../assets/HairIsArt.webp';
+import hairIsArt from '../assets/hairisart.webp';
 import slots from '../assets/slots.webp';
+import shift from '../assets/shift.webp';
+import mbooks from '../assets/mbooks.webp';
 
 export const portfolioData = [
         {
@@ -27,16 +29,16 @@ export const portfolioData = [
             website: "https://m-books-7jir.onrender.com/",
             github: "https://github.com/2ndborn/m-books",
             languages: ["HTML", "CSS", "JavaScript", "Python"],
-            image: slots,
+            image: mbooks,
         },
         {
             id: 4,
-            name: "Slots",
+            name: "Shift",
             description: "Slots is a memory game that encourages the user to remember a temporarily shown sequence of numbers. The user must key the numbers in the exact sequence that they appeared.",
             website: "https://2ndborn.github.io/slots-project/",
             github: "https://github.com/2ndborn/slots-project",
             languages: ["HTML", "CSS", "JavaScript"],
-            image: slots,
+            image: shift
         },
         {
             id: 5,
@@ -47,4 +49,4 @@ export const portfolioData = [
             languages: ["HTML", "CSS", "JavaScript", "Python"],
             image: slots,
         },
-    ];
+    ]

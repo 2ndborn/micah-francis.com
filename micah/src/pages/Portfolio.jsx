@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
-import {motion, spring, useMotionValue} from 'framer-motion';
+import {motion, rgba, spring, useMotionValue} from 'framer-motion';
 import styles from "../styles/Portfolio.module.css";
 import LanguageBadge from '../components/LanguageBadge';
 import {portfolioData} from '../data/portfolioData'
@@ -17,6 +17,8 @@ const Portfolio = () => {
       stiffness: 400,
       damping: 50
     }
+
+    const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
     
   const dragX = useMotionValue(0);
   
@@ -53,7 +55,7 @@ const Portfolio = () => {
       <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
           <h1>Portfolio</h1>
       </section>
-      <section style={{ position: "relative", height: "100vh", backgroundColor: "lightgray", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <motion.div
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -69,18 +71,34 @@ const Portfolio = () => {
               style={{
                 position: 'relative',
                 height: "100%", width: "100%",
-                flexShrink: 0, backgroundColor: "black",
+                flexShrink: 0, 
+                // backgroundColor: "#9e9b97",
                 boxSizing: 'border-box',
-                border: "2px solid black", 
+                // border: "2px solid black", 
                 borderRadius: "10px",
-                perspective: '200px',
-                overflow: 'hidden'
+                perspective: '400px',
+                backfaceVisibility: "hidden",
+                padding: "0.25rem",
+                overflow: 'hidden',
               }}
-              animate={{ scale: index === i ? 0.95 : 0.85 }}
-              transition={SPRING_OPTIONS}
+              animate={{
+                scaleX: index === i ? 0.85 : 0.75, 
+                scaleY: index === i ? 0.95 : 0.85, 
+                boxShadow: i === index ? BOX_SHADOW : "none"
+              }}
+              transition={{scale: SPRING_OPTIONS, boxShadow: {duration: 0.4, ease: "easeOut", delay: 0.2}}}
             >
-              <img style={{position: 'absolute', top: '200px', left: '0px', height: '100%', width: '100%', transform: 'rotateX(45deg) rotateY(-20deg) rotateZ(-25deg)', transformStyle: 'preserve-3d'}} src={ext.image} alt="" />
-              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(158deg, #ffffff 40%, transparent 100%)" }} />
+              <img style={{
+                // position: "absolute",
+                // right: "-400px",
+                // top: 0,
+                height: '100%', 
+                width: '100%',
+                objectFit: "cover",
+                objectPosition: "center"
+                }} src={ext.image} alt="" />
+              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(160deg, rgba(245, 245, 245, 0.3) 0%, #f5f5f5 30%)" }} />
+              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(70deg, #ffffff 10%, rgba(245, 245, 245, 0.3) 40%)" }} />
             </motion.div>
           ))}
 
