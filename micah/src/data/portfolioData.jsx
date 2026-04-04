@@ -2,6 +2,10 @@ import hairIsArt from '../assets/hairisart.webp';
 import slots from '../assets/slots.webp';
 import shift from '../assets/shift.webp';
 import mbooks from '../assets/mbooks.webp';
+import hairThumb from '../assets/hairisArt.png';
+import slotThumb from '../assets/slots.png';
+import mbookThumb from '../assets/mbooks.png';
+import shiftThumb from '../assets/shift.png';
 
 export const portfolioData = [
         {
@@ -12,6 +16,8 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/HairIsArt",
             languages: ["HTML", "CSS", "JavaScript"],
             image: hairIsArt,
+            thumb: hairThumb,
+            backgroundImage: "top left"
         },
         {
             id: 2,
@@ -21,6 +27,8 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/slots-project",
             languages: ["HTML", "CSS", "JavaScript"],
             image: slots,
+            thumb: slotThumb,
+            backgroundImage: "top left"
         },
         {
             id: 3,
@@ -30,6 +38,8 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/m-books",
             languages: ["HTML", "CSS", "JavaScript", "Python"],
             image: mbooks,
+            thumb: mbookThumb,
+            backgroundImage: "top left"
         },
         {
             id: 4,
@@ -38,7 +48,9 @@ export const portfolioData = [
             website: "https://2ndborn.github.io/slots-project/",
             github: "https://github.com/2ndborn/slots-project",
             languages: ["HTML", "CSS", "JavaScript"],
-            image: shift
+            image: shift,
+            thumb: shiftThumb,
+            backgroundImage: "top center"
         },
         {
             id: 5,
@@ -48,5 +60,6 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/m-books",
             languages: ["HTML", "CSS", "JavaScript", "Python"],
             image: slots,
+            backgroundImage: "top left"
         },
     ]

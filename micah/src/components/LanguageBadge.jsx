@@ -14,12 +14,12 @@ const LanguageBadge = ({ lan }) => {
         <span 
         style={{ 
             display: "inline-block", 
-            minWidth: "40px", 
+            width: "clamp(2.5rem, 1.136rem + 6.82vw, 6.25rem)", 
             padding: "0.25rem 0.4rem", 
             backgroundColor: languageColors[lan] || "gray", 
             textAlign: "center", 
             borderRadius: "5px", 
-            fontSize: "0.5rem",
+            fontSize: "clamp(0.5rem, 0.318rem + 0.91vw, 1rem)",
             fontWeight: 700, 
             margin: "0 2px"
         }}>
