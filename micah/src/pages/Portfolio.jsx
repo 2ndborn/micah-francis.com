@@ -1,8 +1,9 @@
 import React, {useEffect, useRef, useState} from 'react'
-import {motion, rgba, spring, useMotionValue} from 'framer-motion';
+import {motion, spring, useMotionValue} from 'framer-motion';
 import styles from "../styles/Portfolio.module.css";
 import LanguageBadge from '../components/LanguageBadge';
 import {portfolioData} from '../data/portfolioData'
+import PortCarousel from '../components/PortCarousel';
 
 const Portfolio = () => {
   
@@ -72,9 +73,7 @@ const Portfolio = () => {
                 position: 'relative',
                 height: "100%", width: "100%",
                 flexShrink: 0, 
-                // backgroundColor: "#9e9b97",
                 boxSizing: 'border-box',
-                // border: "2px solid black", 
                 borderRadius: "10px",
                 perspective: '400px',
                 backfaceVisibility: "hidden",
@@ -88,18 +87,7 @@ const Portfolio = () => {
               }}
               transition={{scale: SPRING_OPTIONS, boxShadow: {duration: 0.4, ease: "easeOut", delay: 0.2}}}
             >
-              <Image objectPosition={ext.backgroundImage} {...ext} />
-              {/* <img style={{
-                // position: "absolute",
-                // right: "-400px",
-                // top: 0,
-                height: '100%', 
-                width: '100%',
-                objectFit: "cover",
-                objectPosition: "left"
-                }} src={ext.image} alt="" />
-              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(160deg, rgba(245, 245, 245, 0.3) 0%, #f5f5f5 30%)" }} />
-              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(70deg, #ffffff 10%, rgba(245, 245, 245, 0.3) 40%)" }} /> */}
+              <PortCarousel objectPosition={ext.backgroundImage} {...ext} />
             </motion.div>
           ))}
 
@@ -107,94 +95,6 @@ const Portfolio = () => {
         <Dots index={index} setIndex={setIndex} />
       </section>
     </div>
-  )
-}
-
-const Image = ({objectPosition, image, name, description, languages, thumb, website}) => {
-  return (
-    <>
-      <img style={{
-        // position: "absolute",
-        // right: "-400px",
-        // top: 0,
-        height: '100%',
-        width: '100%',
-        objectFit: "cover",
-        objectPosition: objectPosition,
-      }} src={image} alt="" />
-      {/* <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(160deg, rgba(245, 245, 245, 0.3) 0%, #f5f5f5 30%)" }} />
-              <div style={{position: 'absolute', inset: 0, backgroundImage: "linear-gradient(70deg, #ffffff 10%, rgba(245, 245, 245, 0.3) 40%)" }} /> */}
-      <div 
-      style={{
-        position: 'absolute', 
-        inset: 0, 
-        backgroundImage: "Linear-gradient(180deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 1) 100%)",
-        display: 'grid',
-        gridTemplateColumns: "repeat(16, 1fr)",
-        gridTemplateRows: "repeat(9, 1fr)",
-        padding: "min(5rem, 8%)"
-      }}>
-        <div style={{
-          gridArea: "2 / 1 / 2 / 9", 
-          fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)",
-          backgroundColor: "bisque"
-        }}>
-          <h1>{name}</h1>
-        </div>
-        <div style={{
-          gridArea: "2 / 9 / 2 / -1 ", 
-          backgroundColor: "lightblue",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center"
-        }}>
-          <a href={website} target='_blank' style={{
-            height: "clamp(1.875rem, 0.739rem + 5.68vw, 5rem)", 
-            width: "clamp(3.438rem, 1.165rem + 11.36vw, 9.688rem)", 
-            padding: 0,
-            borderRadius: "10px",
-            overflow: "hidden"
-          }}>
-            <img style={{height: "100%", width: "100%", objectFit: "contain",imageRendering: "crisp-edges"}} src={thumb} alt='' />
-          </a>
-          <a style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "clamp(1.875rem, 0.739rem + 5.68vw, 5rem)", 
-            width: "clamp(3.438rem, 1.165rem + 11.36vw, 9.688rem)",
-            backgroundColor: "white",
-            fontSize: "2.5rem",
-            borderRadius: "10px"
-          }}>
-            <i className="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <div style={{
-          gridArea: "3 / 1 / 7 / -1",
-          fontSize: "1.5rem"
-        }}>
-          {description}
-        </div>
-        <div style={{
-          gridArea: "7 / 1 / 8 / -1",
-          justifySelf: "end",
-          backgroundColor: "beige",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          gap: 4,
-          paddingRight: "1rem",
-          maxWidth: "100%",
-          width: "fit-content",
-        }}>
-          {languages?.map((l, idx) => (
-            <LanguageBadge key={idx} lan={l} />
-          ))}
-        </div>
-      </div>
-    </>
   )
 }
 
