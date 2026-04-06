@@ -12,6 +12,7 @@ const PortCarousel = ({
   thumb, 
   thumbAlt,
   website,
+  github,
   }) => {
   return (
     <>
@@ -48,13 +49,12 @@ const PortCarousel = ({
           justifyContent: "space-evenly",
           alignItems: "center"
         }}>
-          <motion.a href={website} target='_blank' style={{
+          <motion.a href={website} target='_blank' rel='noopener noreferer' style={{
             height: "clamp(1.875rem, 0.739rem + 5.68vw, 5rem)", 
             width: "clamp(3.438rem, 1.165rem + 11.36vw, 9.688rem)", 
             padding: 0,
             borderRadius: "10px",
             boxShadow: "0px 2px 4px rgba(196, 85, 196, 0.7), 0px 4px 8px rgba(77, 35, 76, 0.9)",
-            // border: "2px solid var(--font-primary)",
             overflow: "hidden",
             cursor: 'pointer'
           }}
@@ -67,7 +67,11 @@ const PortCarousel = ({
           >
             <img style={{height: "100%", width: "100%", objectFit: "cover"}} src={thumb} alt={thumbAlt} />
           </motion.a>
-          <motion.a style={{
+          <motion.a
+            href={github}
+            target='_blank'
+            rel='noopener noreferer'
+            style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -75,10 +79,12 @@ const PortCarousel = ({
             width: "clamp(3.438rem, 1.165rem + 11.36vw, 9.688rem)",
             backgroundColor: "white",
             fontSize: "clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem)",
+            color: "var(--font-primary)",
             borderRadius: "10px",
             border: "2px solid #884587",
             boxShadow: "0px 2px 4px rgba(196, 85, 196, 0.7), 0px 4px 8px rgba(77, 35, 76, 0.9)",
-            cursor: 'pointer'
+            cursor: 'pointer',
+            textDecoration: 'none'
           }}
           whileHover={{
             color: "var(--cta-secondary)",

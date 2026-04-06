@@ -47,7 +47,7 @@ export const portfolioData = [
             description: "Slots is a memory game that encourages the user to remember a temporarily shown sequence of numbers. The user must key the numbers in the exact sequence that they appeared.",
             website: "https://2ndborn.github.io/slots-project/",
             github: "https://github.com/2ndborn/slots-project",
-            languages: ["HTML", "CSS", "JavaScript", "Python", "Bootstrap", "Django"],
+            languages: ["HTML", "C  SS", "JavaScript", "Python", "Bootstrap", "Django"],
             image: shift,
             imageAlt: "Shift website image",
             thumb: shiftThumb,

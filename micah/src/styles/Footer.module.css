@@ -13,9 +13,15 @@
     gap: 1rem;
 }
 
-.upperFooter button {
+.upperFooter button,
+.upperFooter a {
+    all: unset;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
     font-size: 1.1rem;
-    min-width: 150px;
+    min-width: 125px;
     padding: 0.5rem 1rem;
     color: var(--font-primary);
     background-color: hsl(0, 0%, 97%);
@@ -25,11 +31,17 @@
     transition: 0.5s ease;
 }
 
-.upperFooter button i {
+.upperFooter a {
+    text-decoration: none;
+}
+
+.upperFooter button i,
+.upperFooter a i  {
     margin-left: 5px;
 }
 
-.upperFooter button:hover {
+.upperFooter button:hover,
+.upperFooter a:hover {
     border: 2px solid var(--cta-secondary);
     color: var(--cta-secondary);
     transform: scale(1.02);
@@ -62,14 +74,16 @@
         height: 50%;
     }
 
-    .upperFooter button {
+    .upperFooter button,
+    .upperFooter a {
         font-size: 0;
         min-width: 0;
         margin-right: 0;
         padding: 0.5rem;
     }
 
-    .upperFooter button i {
+    .upperFooter button i,
+    .upperFooter a i {
         font-size: 1.5rem;
     }
 

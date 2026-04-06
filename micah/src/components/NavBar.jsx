@@ -24,7 +24,7 @@ const NavBar = () => {
         <ul>
           <li><NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink></li>
           <li><NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>About</NavLink></li>
-          <li><NavLink to="/gallery" className={({isActive}) => (isActive ? styles.active : "")}>Gallery</NavLink></li>
+          <li><NavLink to="/portfolio" className={({isActive}) => (isActive ? styles.active : "")}>Portfolio</NavLink></li>
         </ul>
       </div>
       <div

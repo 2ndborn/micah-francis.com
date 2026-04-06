@@ -23,8 +23,8 @@ const Footer = () => {
             <div className={styles.upperFooter}>
                 <button>WhatsApp<i className="fa-brands fa-whatsapp"></i></button>
                 <button>Email<i className="fa-regular fa-envelope"></i></button>
-                <button>LinkedIn<i className="fa-brands fa-linkedin"></i></button>
-                <button>GitHub<i className="fa-brands fa-github"></i></button>
+                <a href='www.linkedin.com/in/micah-francis-87bb0832' target='_blank' aria-label='Visit my LinkedIn page' rel='noopener noreferer'>LinkedIn<i className="fa-brands fa-linkedin"></i></a>
+                <a href='https://github.com/2ndborn' target='_blank' aria-label='Visit my GitHub page' rel="noopener noreferrer">GitHub<i className="fa-brands fa-github"></i></a>
             </div>
             <div className={styles.lower}>
                 <div style={{ flex: 1, minWidth: '120px' }}>
