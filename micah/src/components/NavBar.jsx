@@ -20,6 +20,7 @@ const NavBar = () => {
       <div
         ref={menuRef}
         className={isOpen ? styles.menuOpen : styles.menu}
+        style={{zIndex: 99}}
       >
         <ul>
           <li><NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink></li>
@@ -31,6 +32,7 @@ const NavBar = () => {
         ref={buttonRef}
         onClick={handleOpen}
         className={`${styles.barsContainer} ${isOpen ? styles.open : ""}`}
+        style={{zIndex: 999}}
       >
         <span className={styles.bars}></span>
         <span className={styles.bars}></span>

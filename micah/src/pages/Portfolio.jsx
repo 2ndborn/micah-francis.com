@@ -56,7 +56,7 @@ const Portfolio = () => {
       <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
           <h1>Portfolio</h1>
       </section>
-      <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
         <motion.div
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -75,7 +75,6 @@ const Portfolio = () => {
                 flexShrink: 0, 
                 boxSizing: 'border-box',
                 borderRadius: "10px",
-                perspective: '400px',
                 backfaceVisibility: "hidden",
                 padding: "0.25rem",
                 overflow: 'hidden',

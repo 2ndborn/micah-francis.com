@@ -32,7 +32,8 @@ const InfiniteScroll = ({ icons, content, x = "-100%" }) => {
             initial="hidden"
             animate={mainControls}
             transition={{duration: 1, delay: 0.5}}
-            className={styles.scrollContainer}>
+            className={styles.scrollContainer}
+            >
                 <div className={styles.infiniteScroll}>
                     {icons.concat(icons).map((icon, i) =>
                         <div key={i} className={styles.items}>{icon}</div>
@@ -44,13 +45,17 @@ const InfiniteScroll = ({ icons, content, x = "-100%" }) => {
                     initial="hidden"
                     animate={contentControls}
                     transition={{duration: 0.5, delay: 1}}
-                    >{content.paragraph}</motion.p>
+                    >
+                        {content.paragraph}
+                    </motion.p>
                     <motion.button
                     variants={contents}
                     initial="hidden"
                     animate={contentControls}
                     transition={{duration: 0.5, delay: 1.5}}
-                    className={styles.ctaBtn}>{content.button}</motion.button>
+                    className={styles.ctaBtn}>
+                        {content.button}
+                    </motion.button>
                 </div>
             </motion.div>
         </div>

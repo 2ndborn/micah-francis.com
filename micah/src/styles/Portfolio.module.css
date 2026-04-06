@@ -1,9 +1,8 @@
 .dots {
-    background-color: pink;
+    background-color: hsl(300, 100%, 90%);
 }
 
 .dotsActive {
-    background-color: red;
-    color: rgba(245, 245, 245, 0.5);
+    background-color: var(--cta-btn);
 }
 
