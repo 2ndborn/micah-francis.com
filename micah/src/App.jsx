@@ -4,6 +4,7 @@ import styles from './App.module.css'
 import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
+import AboutMe from './pages/AboutMe';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path='/' element={<HomePage />} />
-          <Route exact path='/about' element={<h1>About page</h1>} />
+          <Route exact path='/about' element={<AboutMe />} />
           <Route exact path='/portfolio' element={<Portfolio />} />
         </Routes>
         <Footer />
