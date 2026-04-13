@@ -11,9 +11,7 @@
     min-width: 75%;
     background-color: hsl(0, 0%, 93%);
     border-radius: 10px;
-    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.7); */
     box-shadow: none;
-    /* transition: box-shadow 1s ease; */
     padding: min(1.5rem, 5%);
 }
 

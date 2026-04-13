@@ -1,0 +1,19 @@
+svg path {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+    stroke-dasharray: 12;
+    stroke-dashoffset: 4200;
+    animation: TextAnimation 3s ease-in-out 1 forwards;
+}
+
+/* @keyframes TextAnimation {
+    0% {
+        stroke-dashoffset: 4200;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+} */
