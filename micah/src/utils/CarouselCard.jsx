@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-const CarouselCard = ({ active, children }) => {
+const CarouselCard = ({ active, children, height }) => {
     const SPRING_OPTIONS = {
       type: 'spring',
       mass: 3,
@@ -15,7 +15,7 @@ const CarouselCard = ({ active, children }) => {
         <motion.div
             style={{
                 position: 'relative',
-                height: "100%",
+                height: height || "100%",
                 width: "100%",
                 flexShrink: 0,
                 boxSizing: 'border-box',

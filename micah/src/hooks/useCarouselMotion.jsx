@@ -6,7 +6,8 @@ export function useCarouselMotion({
   length,
   autoDelay = 10000,
   dragBuffer = 50,
-  spring = { type: "spring", mass: 3, stiffness: 400, damping: 50 }
+  spring = { type: "spring", mass: 3, stiffness: 400, damping: 50 },
+  height = "90%"
 }) {
   const [index, setIndex] = useState(0);
   const dragX = useMotionValue(0);
@@ -49,7 +50,7 @@ export function useCarouselMotion({
       display: "flex",
       alignItems: "center",
       cursor: "grab",
-      height: "90%"
+      height: height || "90%"
     }
   };
 
