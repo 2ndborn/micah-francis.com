@@ -50,7 +50,7 @@ export function useCarouselMotion({
       display: "flex",
       alignItems: "center",
       cursor: "grab",
-      height: height || "90%"
+      height: height || "90%",
     }
   };
 

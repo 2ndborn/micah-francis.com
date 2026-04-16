@@ -5,15 +5,30 @@ import { useCarouselMotion } from '../hooks/useCarouselMotion';
 import DotsComponent from '../components/DotsComponent';
 import { EductionData } from '../data/EductionData';
 import { ExperienceData } from '../data/ExperienceData';
+import ExperienceCard from '../components/ExperienceCard';
 
 
 const AboutMe = () => {
-  const [showMore, setShowMore] = useState(false);
-  const {index, setIndex, containerMotion} = useCarouselMotion({
+  // const [showMore, setShowMore] = useState(false);
+  const {
+    index: eduIndex,
+    setIndex: setEduIndex, 
+    containerMotion: eduMotion
+  } = useCarouselMotion({
     length: EductionData.length,
-    autoDelay: 100000,
+    autoDelay: 10000,
     dragBuffer: 50,
     height: "80%",
+  })
+  const {
+    index: expIndex,
+    setIndex: setExpIndex, 
+    containerMotion: expMotion
+  } = useCarouselMotion({
+    length: ExperienceData.length,
+    autoDelay: 10000,
+    dragBuffer: 50,
+    height: "auto",
   })
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
@@ -39,9 +54,9 @@ const AboutMe = () => {
       </section>
       <section style={{ height: "100vh", paddingTop: '1rem'}}>
         <h1 style={{ textAlign: "center"}}>Education</h1>
-        <motion.div {...containerMotion}>
+        <motion.div {...eduMotion}>
         {EductionData.map((ed, i) => (
-          <CarouselCard key={i} active={index === i}>
+          <CarouselCard key={i} active={eduIndex === i}>
             <div style={{ display: "flex", flexDirection: "column", alignSelf: "start", justifyContent: "center", alignItems: "center", backgroundColor: "grey"}}>
               <h3>{ed.date}</h3>
               <h2>{ed.qualification}</h2>
@@ -50,14 +65,15 @@ const AboutMe = () => {
           </CarouselCard>
         ))}
         </motion.div>
-        <DotsComponent index={index} setIndex={setIndex} data={EductionData} />
+        <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
       </section>
-      <section style={{height: "100vh"}}>
+      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>
-        <motion.div {...containerMotion}>
+        <motion.div {...expMotion}>
         {ExperienceData.map((ex, i) => (
-        <CarouselCard key={i} active={index === i}>
-          <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", width: "100%"}}>
+        <CarouselCard key={i} active={expIndex === i}>
+          <ExperienceCard ex={ex} />
+          {/* <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", width: "100%"}}>
               <div style={{ display: "flex", width: "100%", height: "10%", marginBottom: "40px" }}>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "calc(100%/3)", borderRight: "2px solid #000" }}>
                   <h2 style={{fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", textAlign: "center", margin: 0}}>{ex.company}</h2>
@@ -89,10 +105,11 @@ const AboutMe = () => {
                     ))}
                 </ul>
               </div>
-          </div>
+          </div> */}
         </CarouselCard>
         ))}
         </motion.div>
+        <DotsComponent index={expIndex} setIndex={setExpIndex} data={ExperienceData} />
       </section>
     </div>
   )
