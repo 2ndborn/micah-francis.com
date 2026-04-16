@@ -8,7 +8,7 @@ import { ExperienceData } from '../data/ExperienceData';
 
 
 const AboutMe = () => {
-
+  const [showMore, setShowMore] = useState(false);
   const {index, setIndex, containerMotion} = useCarouselMotion({
     length: EductionData.length,
     autoDelay: 100000,
@@ -71,11 +71,24 @@ const AboutMe = () => {
               </div>
             <div style={{boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)",}}>
               <ul>
-                {ex.achievements.map(ach => (
+                {ex.achievements.slice(0,3).map((ach) => (
                   <li key={ach} style={{fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)"}}>{ach}</li>
                 ))}
-              </ul>
-            </div>
+                  {!showMore && ex.achievements.length > 3 && (
+                    <li>
+                      <button onClick={() => setShowMore(prev => !prev)}>
+                        {!showMore ? "See more" : "See less"}
+                      </button>
+                    </li>
+                  )}
+                  {showMore &&
+                    ex.achievements.slice(3).map((ach) => (
+                      <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>
+                        {ach}
+                      </li>
+                    ))}
+                </ul>
+              </div>
           </div>
         </CarouselCard>
         ))}
