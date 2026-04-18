@@ -10,6 +10,7 @@ import ExperienceCard from '../components/ExperienceCard';
 
 const AboutMe = () => {
   // const [showMore, setShowMore] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const {
     index: eduIndex,
     setIndex: setEduIndex, 
@@ -19,6 +20,7 @@ const AboutMe = () => {
     autoDelay: 10000,
     dragBuffer: 50,
     height: "80%",
+    paused: isPaused
   })
   const {
     index: expIndex,
@@ -29,6 +31,7 @@ const AboutMe = () => {
     autoDelay: 10000,
     dragBuffer: 50,
     height: "auto",
+    paused: isPaused
   })
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
@@ -52,9 +55,9 @@ const AboutMe = () => {
             porro eius quibusdam laborum quas aliquam.
         </p>
       </section>
-      <section style={{ height: "100vh", paddingTop: '1rem'}}>
+      <section style={{ height: "100vh", paddingTop: '1rem', overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Education</h1>
-        <motion.div {...eduMotion}>
+        <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         {EductionData.map((ed, i) => (
           <CarouselCard key={i} active={eduIndex === i}>
             <div style={{ display: "flex", flexDirection: "column", alignSelf: "start", justifyContent: "center", alignItems: "center", backgroundColor: "grey"}}>
@@ -67,47 +70,14 @@ const AboutMe = () => {
         </motion.div>
         <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
       </section>
-      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>
-        <motion.div {...expMotion}>
-        {ExperienceData.map((ex, i) => (
-        <CarouselCard key={i} active={expIndex === i}>
-          <ExperienceCard ex={ex} />
-          {/* <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", width: "100%"}}>
-              <div style={{ display: "flex", width: "100%", height: "10%", marginBottom: "40px" }}>
-                <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "calc(100%/3)", borderRight: "2px solid #000" }}>
-                  <h2 style={{fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", textAlign: "center", margin: 0}}>{ex.company}</h2>
-                </div>
-                <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "calc(100%/3)", borderRight: "2px solid #000" }}>
-                  <h2 style={{ fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", textAlign: "center", margin: 0 }}>{ex.role}</h2>
-                </div>
-                <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "calc(100%/3)" }}>
-                  <h2 style={{ fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", textAlign: "center", margin: 0 }}>{ex.dates}</h2>
-                </div>
-              </div>
-            <div style={{boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)",}}>
-              <ul>
-                {ex.achievements.slice(0,3).map((ach) => (
-                  <li key={ach} style={{fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)"}}>{ach}</li>
-                ))}
-                  {!showMore && ex.achievements.length > 3 && (
-                    <li>
-                      <button onClick={() => setShowMore(prev => !prev)}>
-                        {!showMore ? "See more" : "See less"}
-                      </button>
-                    </li>
-                  )}
-                  {showMore &&
-                    ex.achievements.slice(3).map((ach) => (
-                      <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>
-                        {ach}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-          </div> */}
-        </CarouselCard>
-        ))}
+        <motion.div {...expMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+          {ExperienceData.map((ex, i) => (
+            <CarouselCard key={i} active={expIndex === i}>
+              <ExperienceCard ex={ex} setPaused={setIsPaused} />
+            </CarouselCard>
+          ))}
         </motion.div>
         <DotsComponent index={expIndex} setIndex={setExpIndex} data={ExperienceData} />
       </section>

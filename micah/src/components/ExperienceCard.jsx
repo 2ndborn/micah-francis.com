@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
+import styles from '../styles/HomePage.module.css';
 
-const ExperienceCard = ({ ex }) => {
+const ExperienceCard = ({ ex, setPaused }) => {
     const [showMore, setShowMore] = useState(false);
+
+    const toggle = () => {
+        setShowMore(prev => {
+            const next = !prev;
+            setPaused(next);
+            return next;
+        })
+    }
     return (
         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%" }}>
             <div style={{
@@ -46,7 +55,10 @@ const ExperienceCard = ({ ex }) => {
                 </ul>
                 <div style={{display: "flex", justifyContent: "end", marginRight: "50px"}}>
                 {ex.achievements.length > 3 && (
-                    <button onClick={() => setShowMore(prev => !prev)}>
+                    <button 
+                    onClick={toggle}
+                    className={styles.ctaBtn}
+                    >
                         {!showMore ? "See more" : "See less"}
                     </button>
                 )}

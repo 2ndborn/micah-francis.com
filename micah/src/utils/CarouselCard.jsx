@@ -13,9 +13,10 @@ const CarouselCard = ({ active, children, height }) => {
 
     return (
         <motion.div
+            layout
             style={{
                 position: 'relative',
-                height: height || "100%",
+                height: "auto",
                 minHeight: '70vh',
                 width: "100%",
                 flexShrink: 0,
@@ -25,12 +26,16 @@ const CarouselCard = ({ active, children, height }) => {
                 padding: "0.25rem",
                 overflow: 'hidden',
             }}
+            
             animate={{
                 scaleX: active ? 0.85 : 0.75,
                 scaleY: active ? 0.95 : 0.85,
                 boxShadow: active ? BOX_SHADOW : "none"
             }}
-            transition={{ scale: SPRING_OPTIONS, boxShadow: { duration: 0.4, ease: "easeOut", delay: 0.2 } }}
+            transition={{
+                layout: {duration: 0.45, ease: "easeInOut"},
+                scale: SPRING_OPTIONS, 
+                boxShadow: { duration: 0.4, ease: "easeOut", delay: 0.2 } }}
         >
             {children}
         </motion.div>

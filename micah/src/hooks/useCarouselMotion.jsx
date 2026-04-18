@@ -7,13 +7,15 @@ export function useCarouselMotion({
   autoDelay = 10000,
   dragBuffer = 50,
   spring = { type: "spring", mass: 3, stiffness: 400, damping: 50 },
-  height = "90%"
+  height = "90%",
+  paused = false
 }) {
   const [index, setIndex] = useState(0);
   const dragX = useMotionValue(0);
 
   // AUTOPLAY
   useEffect(() => {
+    if (paused) return;
     const interval = setInterval(() => {
       const x = dragX.get();
       if (x === 0) {
@@ -22,7 +24,7 @@ export function useCarouselMotion({
     }, autoDelay);
 
     return () => clearInterval(interval);
-  }, [length, autoDelay, dragX]);
+  }, [length, autoDelay, dragX, paused]);
 
   // DRAG END LOGIC
   const onDragEnd = () => {
