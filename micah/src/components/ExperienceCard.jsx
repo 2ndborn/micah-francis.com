@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 
 const ExperienceCard = ({ ex }) => {
     const [showMore, setShowMore] = useState(false);
@@ -21,17 +22,27 @@ const ExperienceCard = ({ ex }) => {
                 </div>
             </div>
 
-            <div style={{ boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)", marginBottom: "4rem" }}>
+            <motion.div 
+                style={{ boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)", marginBottom: "4rem" }}>
                 <ul>
                     {ex.achievements.slice(0, 3).map((ach) => (
                         <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>{ach}</li>
                     ))}
+                    <AnimatePresence>
                     {showMore &&
                         ex.achievements.slice(3).map((ach) => (
-                            <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>
+                            <motion.li
+                                key={ach}
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.35, ease: "easeInOut" }}
+                                style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}
+                            >
                                 {ach}
-                            </li>
+                            </motion.li>
                         ))}
+                        </AnimatePresence>
                 </ul>
                 <div style={{display: "flex", justifyContent: "end", marginRight: "50px"}}>
                 {ex.achievements.length > 3 && (
@@ -40,7 +51,7 @@ const ExperienceCard = ({ ex }) => {
                     </button>
                 )}
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
