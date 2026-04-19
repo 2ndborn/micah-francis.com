@@ -6,10 +6,12 @@ import DotsComponent from '../components/DotsComponent';
 import { EductionData } from '../data/EductionData';
 import { ExperienceData } from '../data/ExperienceData';
 import ExperienceCard from '../components/ExperienceCard';
+import { languageIcons } from '../data/languageIcons';
+import { Skills } from '../data/Skillsdata';
+import SkillsCard from '../components/SkillsCard';
 
 
 const AboutMe = () => {
-  // const [showMore, setShowMore] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const {
     index: eduIndex,
@@ -33,6 +35,19 @@ const AboutMe = () => {
     height: "auto",
     paused: isPaused
   })
+
+  const attributes = [...Object.entries(languageIcons), ...Object.entries(Skills)]
+  const {index: skillsIndex,
+     setIndex: setSkillsIndex,
+     containerMotion: skillsMotion
+  } = useCarouselMotion({
+    length: attributes.length,
+    autoDelay: 100000,
+    dragBuffer: 50,
+    height: "auto",
+    paused: isPaused
+  })
+  
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
   const PAD_TOP = "min(5rem, 5%)"
@@ -69,6 +84,17 @@ const AboutMe = () => {
         ))}
         </motion.div>
         <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
+      </section>
+      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
+        <h1 style={{ textAlign: "center"}}>Skills & Attributes</h1>
+        <motion.div {...skillsMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+          {attributes.map((att, i) => (
+            <CarouselCard key={i} active={skillsIndex === i}>
+              <SkillsCard sk={Object.entries(Skills)} setPaused={setIsPaused} />
+            </CarouselCard>
+          ))}
+        </motion.div>
+        {/* <DotsComponent index={skillsIndex} setIndex={setSkillsIndex} /> */}
       </section>
       <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>

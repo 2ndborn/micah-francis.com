@@ -17,17 +17,18 @@ const ExperienceCard = ({ ex, setPaused }) => {
             <div style={{
                 display: "flex",
                 width: "100%",
+                alignItems: "stretch",
                 marginBottom: "1.5rem",
                 marginTop: "4rem"
             }}>
-                <div style={{ flex: 1, borderRight: "2px solid #000", textAlign: "center" }}>
-                    <h2 style={{ margin: 0 }}>{ex.company}</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid #000" }}>
+                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))" }}>{ex.company}</h2>
                 </div>
-                <div style={{ flex: 1, borderRight: "2px solid #000", textAlign: "center" }}>
-                    <h2 style={{ margin: 0 }}>{ex.role}</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid #000" }}>
+                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.role}</h2>
                 </div>
-                <div style={{ flex: 1, textAlign: "center" }}>
-                    <h2 style={{ margin: 0 }}>{ex.dates}</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.dates}</h2>
                 </div>
             </div>
 
@@ -53,7 +54,7 @@ const ExperienceCard = ({ ex, setPaused }) => {
                         ))}
                         </AnimatePresence>
                 </ul>
-                <div style={{display: "flex", justifyContent: "end", marginRight: "50px"}}>
+                <div style={{display: "flex", justifyContent: "center" }}>
                 {ex.achievements.length > 3 && (
                     <button 
                     onClick={toggle}

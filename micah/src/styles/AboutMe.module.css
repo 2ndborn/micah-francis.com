@@ -1,19 +1,15 @@
-svg path {
-    fill: none;
-    stroke: #000;
-    stroke-width: 2;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
-    stroke-dasharray: 12;
-    stroke-dashoffset: 4200;
-    animation: TextAnimation 3s ease-in-out 1 forwards;
+.SkillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(9.375rem, 8.243rem + 5.68vw, 12.5rem), 1fr));
+    row-gap: 2rem;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    /* padding-left: min(3rem, 3%);
+    padding-left: min(3rem, 3%); */
 }
 
-/* @keyframes TextAnimation {
-    0% {
-        stroke-dashoffset: 4200;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-} */
+.icons {
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    color: rgb(136, 69, 135);
+}
