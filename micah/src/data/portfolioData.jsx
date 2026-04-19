@@ -36,7 +36,7 @@ export const portfolioData = [
             description: "M.Books is a web application designed that enables its users to search for Japanese Manga comic that they would like to read.",
             website: "https://m-books-7jir.onrender.com/",
             github: "https://github.com/2ndborn/m-books",
-            languages: ["HTML", "CSS", "JavaScript", "Python", "MaterializeCSS", "Flask"],
+            languages: ["HTML", "CSS", "JavaScript", "Python", "MaterializeCSS", "Flask", "MongoDB"],
             image: mbooks,
             thumb: mbookThumb,
             backgroundImage: "top left"
@@ -47,7 +47,7 @@ export const portfolioData = [
             description: "Slots is a memory game that encourages the user to remember a temporarily shown sequence of numbers. The user must key the numbers in the exact sequence that they appeared.",
             website: "https://2ndborn.github.io/slots-project/",
             github: "https://github.com/2ndborn/slots-project",
-            languages: ["HTML", "C  SS", "JavaScript", "Python", "Bootstrap", "Django"],
+            languages: ["HTML", "CSS", "JavaScript", "Python", "Bootstrap", "Django", "PostgresSQL"],
             image: shift,
             imageAlt: "Shift website image",
             thumb: shiftThumb,

@@ -11,6 +11,8 @@ import {
 import { DiMaterializecss } from "react-icons/di";
 import { SiFlask } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiMongodb } from "react-icons/si";
 
 export const languageIcons = {
     HTML: FaHtml5,
@@ -22,5 +24,7 @@ export const languageIcons = {
     Flask: SiFlask,
     Django: SiDjango,
     React: FaReact,
+    PostgresSQL: BiLogoPostgresql,
+    MongoDB: SiMongodb,
     Node: FaNode,
 }
