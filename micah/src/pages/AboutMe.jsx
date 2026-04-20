@@ -47,6 +47,8 @@ const AboutMe = () => {
     height: "auto",
     paused: isPaused
   })
+
+  const head = ["Technical Skills", "Transferable Skills"];
   
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
@@ -90,7 +92,7 @@ const AboutMe = () => {
         <motion.div {...skillsMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
           {attributes.map((att, i) => (
             <CarouselCard key={i} active={skillsIndex === i}>
-              <SkillsCard sk={Object.entries(Skills)} setPaused={setIsPaused} />
+              <SkillsCard sk={Object.entries(Skills)} setPaused={setIsPaused} head={head[i]} />
             </CarouselCard>
           ))}
         </motion.div>

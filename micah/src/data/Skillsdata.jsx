@@ -13,6 +13,7 @@ import { SiFlask } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiMongodb } from "react-icons/si";
+
 export const Skills = {
     HTML: FaHtml5,
     CSS: FaCss3Alt,

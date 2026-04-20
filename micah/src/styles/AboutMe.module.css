@@ -1,6 +1,6 @@
 .SkillsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(9.375rem, 8.243rem + 5.68vw, 12.5rem), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(9.375rem, 7.67rem + 8.52vw, 14.063rem), 1fr));
     row-gap: 2rem;
     justify-items: center;
     width: 100%;
@@ -10,6 +10,6 @@
 }
 
 .icons {
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4));
     color: rgb(136, 69, 135);
 }

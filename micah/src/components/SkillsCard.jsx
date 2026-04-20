@@ -4,7 +4,7 @@ import styles from '../styles/HomePage.module.css';
 import stylesA from '../styles/AboutMe.module.css';
 import { Skills } from '../data/Skillsdata';
 
-const SkillsCard = ({ sk, setPaused }) => {
+const SkillsCard = ({ sk, head, setPaused }) => {
     const [showMore, setShowMore] = useState(false);
 
     const toggle = () => {
@@ -14,6 +14,7 @@ const SkillsCard = ({ sk, setPaused }) => {
             return next;
         })
     }
+
     return (
         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%", }}>
             <div
@@ -21,10 +22,11 @@ const SkillsCard = ({ sk, setPaused }) => {
                     display: "flex",
                     justifyContent: "center",
                     width: "100%",
-                    marginBottom: "1.5rem",
+                    marginBottom: "4rem",
                     marginTop: "4rem"
-                }}>
-                <h2 style={{ margin: 0 }}>Skills</h2>
+                }}
+                >
+                    <h1 style={{ margin: 0, color: 'rgb(118, 58, 117)' }}>{head}</h1>
             </div>
             <motion.div className={stylesA.SkillsGrid}>
                 {sk.slice(0, 10).map(([label, Icon], i) => (
@@ -42,7 +44,7 @@ const SkillsCard = ({ sk, setPaused }) => {
                 ))}
                 </AnimatePresence>
             </motion.div>
-            <div style={{ display: "flex", justifyContent: "center", marginBottom: "4rem" }}>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem", marginBottom: "4rem" }}>
                 {sk.length > 10 && (
                     <button
                         onClick={toggle}
