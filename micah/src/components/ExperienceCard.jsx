@@ -14,16 +14,17 @@ const ExperienceCard = ({ ex, setPaused }) => {
     }
     return (
         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%" }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, marginTop: "2rem" }}>
+                <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))" }}>{ex.company}</h2>
+            </div>
             <div style={{
                 display: "flex",
                 width: "100%",
                 alignItems: "stretch",
                 marginBottom: "1.5rem",
-                marginTop: "4rem"
+                marginTop: "2rem"
             }}>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid #000" }}>
-                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))" }}>{ex.company}</h2>
-                </div>
+                
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid #000" }}>
                     <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.role}</h2>
                 </div>

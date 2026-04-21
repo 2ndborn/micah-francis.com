@@ -36,7 +36,7 @@ const AboutMe = () => {
     paused: isPaused
   })
 
-  const attributes = [...Object.entries(languageIcons), ...Object.entries(Skills)]
+  const attributes = [Object.entries(languageIcons), Object.entries(Skills)]
   const {index: skillsIndex,
      setIndex: setSkillsIndex,
      containerMotion: skillsMotion
@@ -92,11 +92,11 @@ const AboutMe = () => {
         <motion.div {...skillsMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
           {attributes.map((att, i) => (
             <CarouselCard key={i} active={skillsIndex === i}>
-              <SkillsCard sk={Object.entries(Skills)} setPaused={setIsPaused} head={head[i]} />
+              <SkillsCard sk={att} setPaused={setIsPaused} head={head[i]} />
             </CarouselCard>
           ))}
         </motion.div>
-        {/* <DotsComponent index={skillsIndex} setIndex={setSkillsIndex} /> */}
+        <DotsComponent index={skillsIndex} setIndex={setSkillsIndex} data={attributes} />
       </section>
       <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>

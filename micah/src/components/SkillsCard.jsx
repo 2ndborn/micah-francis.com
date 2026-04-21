@@ -37,10 +37,17 @@ const SkillsCard = ({ sk, head, setPaused }) => {
                 ))}
                 <AnimatePresence>
                 {showMore && sk.slice(10).map(([label, Icon], i) => (
-                    <div key={i}>
-                        <Icon style={{ fontSize: "2.5rem" }} />
+                    <motion.div
+                        key={i}
+                        style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.35, ease: "easeInOut" }}
+                    >
+                        <Icon className={stylesA.icons} style={{ fontSize: "2.5rem" }} />
                         <div>{label}</div>
-                    </div>
+                    </motion.div>
                 ))}
                 </AnimatePresence>
             </motion.div>
