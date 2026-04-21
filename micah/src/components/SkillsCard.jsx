@@ -26,7 +26,7 @@ const SkillsCard = ({ sk, head, setPaused }) => {
                     marginTop: "4rem"
                 }}
                 >
-                    <h1 style={{ margin: 0, color: 'rgb(118, 58, 117)' }}>{head}</h1>
+                    <h1 style={{ margin: 0, color: 'rgb(118, 58, 117)', fontSize: "clamp(1.5rem, 1.318rem + 0.91vw, 2rem)" }}>{head}</h1>
             </div>
             <motion.div className={stylesA.SkillsGrid}>
                 {sk.slice(0, 10).map(([label, Icon], i) => (
