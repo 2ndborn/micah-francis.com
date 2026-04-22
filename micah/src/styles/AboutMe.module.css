@@ -13,3 +13,14 @@
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4));
     color: rgb(136, 69, 135);
 }
+
+.EducationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.qualification {
+    grid-area: 1 / 1 / 1 / -1;
+}

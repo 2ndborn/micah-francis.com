@@ -9,6 +9,7 @@ import ExperienceCard from '../components/ExperienceCard';
 import { languageIcons } from '../data/languageIcons';
 import { Skills } from '../data/Skillsdata';
 import SkillsCard from '../components/SkillsCard';
+import EducationComponent from '../components/EducationComponent';
 
 
 const AboutMe = () => {
@@ -77,11 +78,7 @@ const AboutMe = () => {
         <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         {EductionData.map((ed, i) => (
           <CarouselCard key={i} active={eduIndex === i}>
-            <div style={{ display: "flex", flexDirection: "column", alignSelf: "start", justifyContent: "center", alignItems: "center", backgroundColor: "grey"}}>
-              <h3>{ed.date}</h3>
-              <h2>{ed.qualification}</h2>
-              <h3>{ed.facility}</h3>
-            </div>
+            <EducationComponent ed={ed} />
           </CarouselCard>
         ))}
         </motion.div>
