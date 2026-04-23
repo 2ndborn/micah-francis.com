@@ -18,7 +18,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    row-gap: 2rem;
+    row-gap: 1rem;
     margin: 3rem 0px;
     padding-left: min(5rem, 5%);
     padding-right: min(5rem, 5%);
@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 2.25rem;
 }
 
 .qualification {

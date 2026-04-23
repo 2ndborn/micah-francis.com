@@ -92,7 +92,6 @@
     padding: 0.5rem 1rem;
     color: var(--font-primary);
     border: 2px solid var(--font-primary);
-    /* background-color: var(--cta-secondary); */
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease;

@@ -53,7 +53,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
+      <section style={{height: "25vh", display: "flex", alignItems: "center", backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"}}>
           <h1 style={{margin: "2rem"}}>Portfolio</h1>
       </section>
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
