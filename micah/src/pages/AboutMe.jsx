@@ -62,7 +62,7 @@ const AboutMe = () => {
   return (
     <div>
       <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
-        <h1>About Me</h1>
+        <h1 style={{marginLeft: "2rem"}}>About Me</h1>
       </section>
       <section style={{ position: "relative", height: "50vh", backgroundColor: "grey" }}>
         <h2>Executive Statement</h2>

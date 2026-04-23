@@ -54,7 +54,7 @@ const Portfolio = () => {
   return (
     <div>
       <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
-          <h1>Portfolio</h1>
+          <h1 style={{margin: "2rem"}}>Portfolio</h1>
       </section>
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
         <motion.div
