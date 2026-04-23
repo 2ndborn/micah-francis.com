@@ -10,6 +10,7 @@ import { languageIcons } from '../data/languageIcons';
 import { Skills } from '../data/Skillsdata';
 import SkillsCard from '../components/SkillsCard';
 import EducationComponent from '../components/EducationComponent';
+import StatementComponent from '../components/StatementComponent';
 
 
 const AboutMe = () => {
@@ -64,7 +65,8 @@ const AboutMe = () => {
       <section style={{height: "25vh", display: "flex", alignItems: "center"}}>
         <h1 style={{marginLeft: "2rem"}}>About Me</h1>
       </section>
-      <section style={{ position: "relative", height: "50vh", backgroundColor: "grey" }}>
+      <StatementComponent />
+      {/* <section style={{ position: "relative", height: "50vh", backgroundColor: "grey" }}>
         <h2>Executive Statement</h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -72,7 +74,7 @@ const AboutMe = () => {
             dolores odio excepturi? Iste sapiente iusto, corporis et quasi 
             porro eius quibusdam laborum quas aliquam.
         </p>
-      </section>
+      </section> */}
       <section style={{ height: "100vh", paddingTop: '1rem', overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Education</h1>
         <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
