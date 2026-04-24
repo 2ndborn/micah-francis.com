@@ -8,6 +8,21 @@ import PortCarousel from '../components/PortCarousel';
 const Portfolio = () => {
   
     const [index, setIndex] = useState(0)
+    const [search, setSearch] = useState(portfolioData);
+
+  const handleSearch = (event) => {
+    const inputText = event.target.value.toLowerCase();
+    const filtered = portfolioData.filter(project =>
+      project.languages.some(
+        lang => lang.toLowerCase().includes(inputText)
+      )
+    )
+    setSearch(filtered)
+  }
+
+  useEffect(() => {
+    setIndex(0);
+  }, [search])
 
     const ONE_SECOND = 1000;
     const AUTO_DELAY = ONE_SECOND * 10;
@@ -29,7 +44,7 @@ const Portfolio = () => {
 
       if (x === 0) {
         setIndex((prev) => {
-          if(prev === portfolioData.length - 1) {
+          if(prev === search.length - 1) {
             return 0
           }
           return prev + 1
@@ -43,7 +58,7 @@ const Portfolio = () => {
 
   const onDragEnd = () => {
     const x = dragX.get();
-    if (x <= -DRAG_BUFFER && index < portfolioData.length - 1) {
+    if (x <= -DRAG_BUFFER && index < search.length - 1) {
       setIndex(prev => prev + 1)
     } else if (x >= DRAG_BUFFER && index > 0) {
       setIndex(prev => prev - 1)
@@ -56,6 +71,7 @@ const Portfolio = () => {
       <section style={{height: "25vh", display: "flex", alignItems: "center", backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"}}>
           <h1 style={{margin: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>Portfolio</h1>
       </section>
+      <input onChange={(event) => handleSearch(event)} type="text" placeholder='Search language...' />
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
         <motion.div
           drag="x"
@@ -66,9 +82,9 @@ const Portfolio = () => {
           onDragEnd={onDragEnd}
           style={{x: dragX, display: "flex", alignItems: 'center', cursor: 'grab', height: "90%" }}
         >
-          {portfolioData.map((ext, i) => (
+          {search.map((ext, i) => (
             <motion.div
-              key={i}
+              key={ext.id}
               style={{
                 position: 'relative',
                 height: "100%", 
@@ -92,16 +108,16 @@ const Portfolio = () => {
           ))}
 
         </motion.div>
-        <Dots index={index} setIndex={setIndex} />
+        <Dots index={index} setIndex={setIndex} search={search} />
       </section>
     </div>
   )
 }
 
-const Dots = ({ index, setIndex }) => {
+const Dots = ({ index, setIndex, search }) => {
   return (
     <div style={{display: 'flex', justifyContent: 'center', marginTop: '4px', gap: 4}}>
-      {portfolioData.map((_, i) => (
+      {search.map((_, i) => (
         <button 
         key={i} 
         onClick={() => setIndex(i)} 

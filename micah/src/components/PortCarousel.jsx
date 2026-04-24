@@ -13,6 +13,7 @@ const PortCarousel = ({
   thumbAlt,
   website,
   github,
+  filter
   }) => {
   return (
     <>
