@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {motion, spring, useMotionValue} from 'framer-motion';
 import styles from "../styles/Portfolio.module.css";
 import LanguageBadge from '../components/LanguageBadge';
@@ -53,7 +53,7 @@ const Portfolio = () => {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef)
-  }, []);
+  }, [search]);
 
 
   const onDragEnd = () => {
@@ -71,7 +71,14 @@ const Portfolio = () => {
       <section style={{height: "25vh", display: "flex", alignItems: "center", backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"}}>
           <h1 style={{margin: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>Portfolio</h1>
       </section>
-      <input onChange={(event) => handleSearch(event)} type="text" placeholder='Search language...' />
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
+        <input
+          style={{width: '83%', padding: '0.5rem 0 0.5rem 1rem', fontSize: '1.5rem', boxShadow: '0px 2px 8px rgba(204, 0, 204, 0.1), 0px 4px 16px rgba(77, 5, 76, 0.3)', borderRadius: '5px', margin: '2rem 0'}}
+          onChange={(event) => handleSearch(event)} 
+          type="text" 
+          placeholder='Search language...' 
+        />
+      </div>
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
         <motion.div
           drag="x"
