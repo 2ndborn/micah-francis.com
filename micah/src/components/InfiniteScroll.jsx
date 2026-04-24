@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import {motion, useAnimation, useInView} from 'framer-motion';
+import {Link} from 'react-router-dom';
 import styles from '../styles/HomePage.module.css';
 
-const InfiniteScroll = ({ icons, content, x = "-100%" }) => {
+const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default' }) => {
     const ref = useRef(null);
     const inView = useInView(ref, {once: false});
     const mainControls = useAnimation();
@@ -46,16 +47,18 @@ const InfiniteScroll = ({ icons, content, x = "-100%" }) => {
                     animate={contentControls}
                     transition={{duration: 0.5, delay: 1}}
                     >
-                        {content.paragraph}
+                        {paragraph}
                     </motion.p>
+                    <Link to={link}>
                     <motion.button
                         variants={contents}
                         initial="hidden"
                         animate={contentControls}
                         transition={{ duration: 0.5, delay: 1.5 }}
                         className={styles.ctaBtn}>
-                        {content.button}
+                        {button}
                     </motion.button>
+                    </Link>
                 </div>
             </motion.div>
         </div>

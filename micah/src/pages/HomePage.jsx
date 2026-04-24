@@ -1,12 +1,9 @@
 import React, { useRef } from 'react'
-import {motion, useScroll, useTransform} from 'framer-motion';
+import {motion} from 'framer-motion';
 import styles from '../styles/HomePage.module.css';
-import NatWestIcon from '../components/NatwestIcon';
-import Metro from '../components/Metro';
-import CivilSer from '../components/CivilSer';
-import South from '../components/South';
 import InfiniteScroll from '../components/InfiniteScroll';
 import Reveal from '../utils/Reveal';
+import { HomePageData } from '../data/HomePageData';
 
 const HomePage = () => {
   const container = {
@@ -50,27 +47,6 @@ const HomePage = () => {
     }
   }
 
-  const symbols = [<i className="fa-brands fa-html5"></i>,<i className="fa-brands fa-css3-alt"></i>,<i className="fa-brands fa-js"></i>,<i className="fa-brands fa-python"></i>];
-
-  const employ =[<NatWestIcon className={styles.icon} />,
-    <Metro className={styles.icon} />,
-    <CivilSer className={styles.icon} />,
-    <South className={styles.icon} />
-  ]
-
-  const content = [
-    {
-      paragraph: "Qualified developer providing freelance and employment services.",
-      button: "See Portfolio"
-    },
-    {
-      paragraph: "With over 2 decades of experience in people management in a ranges of industries.",
-      button: "See About Me"
-    }
-  ]
-
-  const [sectionOne, sectionTwo] = content;
-
   return (
     <div>
       <section style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -85,8 +61,15 @@ const HomePage = () => {
         </motion.div>
       </section>
       <section className={styles.secTwo}>
-        <InfiniteScroll icons={symbols} content={sectionOne} />
-        <InfiniteScroll icons={employ} content={sectionTwo} x='100%' />
+        {HomePageData.map((home, i) => (
+          <InfiniteScroll 
+            key={i}
+            icons={home.icons}
+            paragraph={home.paragraph}
+            button={home.button}
+            link={home.link}
+            x={home.x}          />
+        ))}
       </section>
     </div>
     

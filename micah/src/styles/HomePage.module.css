@@ -17,6 +17,7 @@
 
 .introDisplay h1, .introDisplay h3 {
     margin: 5px 0;
+    color: hsl(0, 0%, 95%)!important;
 }
 
 .secTwo {
@@ -39,7 +40,6 @@
     align-items: center;
     background-color: hsl(0, 0%, 93%);
     border-radius: 10px;
-    /* box-shadow: inset 0px 2px 8px var(--cta-btn), inset 2px 0px 8px rgba(204, 0, 204, 0.7); */
     overflow: hidden;
 }
 
