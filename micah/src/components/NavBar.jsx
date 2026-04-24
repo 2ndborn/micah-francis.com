@@ -22,7 +22,7 @@ const NavBar = () => {
         className={isOpen ? styles.menuOpen : styles.menu}
         style={{zIndex: 99}}
       >
-        <ul>
+        <ul onClick={handleOpen}>
           <li><NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink></li>
           <li><NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>About</NavLink></li>
           <li><NavLink to="/portfolio" className={({isActive}) => (isActive ? styles.active : "")}>Portfolio</NavLink></li>

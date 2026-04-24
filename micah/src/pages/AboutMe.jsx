@@ -72,7 +72,7 @@ const AboutMe = () => {
         <h1 style={{marginLeft: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>About Me</h1>
       </section>
       <StatementComponent />
-      <section style={{ height: "100vh", paddingTop: '1rem', overflow: "hidden"}}>
+      <section style={{ height: "auto", paddingTop: '1rem', overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Education</h1>
         <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         {EductionData.map((ed, i) => (
@@ -84,7 +84,7 @@ const AboutMe = () => {
         <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
       </section>
       <hr style={{width: "50%", marginTop: "3rem", marginBottom: '2rem'}}/>
-      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
+      <section style={{height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Skills & Attributes</h1>
         <motion.div {...skillsMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
           {attributes.map((att, i) => (
@@ -96,7 +96,7 @@ const AboutMe = () => {
         <DotsComponent index={skillsIndex} setIndex={setSkillsIndex} data={attributes} />
       </section>
       <hr style={{width: "50%", marginTop: "3rem", marginBottom: '0.5rem'}}/>
-      <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
+      <section style={{height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>
         <motion.div {...expMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
           {ExperienceData.map((ex, i) => (
