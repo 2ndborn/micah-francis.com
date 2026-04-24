@@ -73,10 +73,10 @@ const Portfolio = () => {
       </section>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
         <input
-          style={{width: '83%', padding: '0.5rem 0 0.5rem 1rem', fontSize: '1.5rem', boxShadow: '0px 2px 8px rgba(204, 0, 204, 0.1), 0px 4px 16px rgba(77, 5, 76, 0.3)', borderRadius: '5px', margin: '2rem 0'}}
+          style={{width: '83%', color: 'hsl(301, 33%, 40%)', padding: '0.5rem 0 0.5rem 1rem', fontSize: '1.5rem', boxShadow: '0px 2px 8px rgba(204, 0, 204, 0.1), 0px 4px 16px rgba(77, 5, 76, 0.3)', borderRadius: '5px', border: 'none', margin: '2rem 0'}}
           onChange={(event) => handleSearch(event)} 
           type="text" 
-          placeholder='Search language...' 
+          placeholder='Search by language...' 
         />
       </div>
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>

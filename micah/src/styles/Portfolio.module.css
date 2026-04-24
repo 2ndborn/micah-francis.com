@@ -5,3 +5,11 @@
 .dotsActive {
     background-color: var(--cta-btn);
 }
+
+input::placeholder {
+    color: hsl(301, 33%, 70%);
+}
+
+input:focus {
+    outline: none;
+}
