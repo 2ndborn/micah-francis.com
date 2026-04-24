@@ -25,11 +25,11 @@ const ExperienceCard = ({ ex, setPaused }) => {
                 marginTop: "2rem"
             }}>
                 
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid rgb(83, 41, 83)" }}>
-                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", color: 'rgb(118, 58, 117)' }}>{ex.role}</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid var(--headfour-color)" }}>
+                    <h3 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.role}</h3>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-                    <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)", color: 'rgb(118, 58, 117)' }}>{ex.dates}</h2>
+                    <h3 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)"}}>{ex.dates}</h3>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@ const ExperienceCard = ({ ex, setPaused }) => {
                 style={{ boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)", marginBottom: "4rem" }}>
                 <ul>
                     {ex.achievements.slice(0, 3).map((ach) => (
-                        <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)", color: 'rgb(118, 58, 117)' }}>{ach}</li>
+                        <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>{ach}</li>
                     ))}
                     <AnimatePresence>
                     {showMore &&
@@ -48,7 +48,7 @@ const ExperienceCard = ({ ex, setPaused }) => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.35, ease: "easeInOut" }}
-                                style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)", color: 'rgb(118, 58, 117)' }}
+                                style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}
                             >
                                 {ach}
                             </motion.li>

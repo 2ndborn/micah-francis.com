@@ -17,7 +17,6 @@ const CarouselCard = ({ active, children, height }) => {
             style={{
                 position: 'relative',
                 height: "auto",
-                // backgroundColor: "hsl(0, 0%, 93%)",
                 width: "100%",
                 flexShrink: 0,
                 boxSizing: 'border-box',

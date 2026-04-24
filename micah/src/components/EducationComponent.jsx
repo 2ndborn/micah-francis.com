@@ -9,16 +9,17 @@ const EducationComponent = ({ed}) => {
         <h2>{ed.qualification}</h2>
       </div>
       <div className={styles.facility}>
-        <h3 style={{margin: 0}}>{ed.facility}</h3>
+        <h4 style={{margin: 0}}>{ed.facility}</h4>
       </div>
       <div className={styles.date}>
-        <h3 style={{margin: 0}}>{ed.date}</h3>
+        <h4 style={{margin: 0}}>{ed.date}</h4>
       </div>
       <div className={styles.location}>
-        <h3 style={{margin: 0}}>{ed.location}</h3>
+        <h4 style={{margin: 0}}>{ed.location}</h4>
       </div>
       <div className={styles.desc}>
-        <p>{ed.description}</p>
+      <hr style={{width: "75%", marginBottom: '3rem'}}/>
+        <p><strong>Summary: </strong>{ed.description}</p>
       </div>
     </div>
 

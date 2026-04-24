@@ -4,9 +4,17 @@
     --font-primary: #4D054C;
     --font-secondary: #0A0908;
     --body-color: #F2F4F3;
+    --paragraph-color: rgb(136, 69, 135);
+    --headtwo-color: hsl(301, 33%, 30%);
+    --headfour-color: hsl(301, 33%, 35%);
 }
 
 body {
     background-color: var(--body-color);
     color: var(--font-primary);
 }
+
+h2 {color: var(--headtwo-color);}
+h4, h3, li {color: var(--headfour-color);}
+
+p {color: var(--paragraph-color);}

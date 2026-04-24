@@ -5,8 +5,6 @@
     justify-items: center;
     width: 100%;
     margin-bottom: 2rem;
-    /* padding-left: min(3rem, 3%);
-    padding-left: min(3rem, 3%); */
 }
 
 .icons {
@@ -19,7 +17,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     row-gap: 1rem;
-    margin: 3rem 0px;
+    margin: 1.75rem 0px;
     padding-left: min(5rem, 5%);
     padding-right: min(5rem, 5%);
 }
@@ -56,6 +54,7 @@
 
 .desc {
     grid-area: 3 / 1 / 4 / -1; 
+    min-height: 200px;
     text-align: justify !important; 
     font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
 }

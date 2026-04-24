@@ -69,18 +69,9 @@ const AboutMe = () => {
         backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"
         }}
       >
-        <h1 style={{marginLeft: "2rem"}}>About Me</h1>
+        <h1 style={{marginLeft: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>About Me</h1>
       </section>
       <StatementComponent />
-      {/* <section style={{ position: "relative", height: "50vh", backgroundColor: "grey" }}>
-        <h2>Executive Statement</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Neque eius, distinctio adipisci facilis dolorem consequuntur 
-            dolores odio excepturi? Iste sapiente iusto, corporis et quasi 
-            porro eius quibusdam laborum quas aliquam.
-        </p>
-      </section> */}
       <section style={{ height: "100vh", paddingTop: '1rem', overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Education</h1>
         <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
@@ -92,6 +83,7 @@ const AboutMe = () => {
         </motion.div>
         <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
       </section>
+      <hr style={{width: "50%", marginTop: "3rem", marginBottom: '2rem'}}/>
       <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Skills & Attributes</h1>
         <motion.div {...skillsMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
@@ -103,6 +95,7 @@ const AboutMe = () => {
         </motion.div>
         <DotsComponent index={skillsIndex} setIndex={setSkillsIndex} data={attributes} />
       </section>
+      <hr style={{width: "50%", marginTop: "3rem", marginBottom: '0.5rem'}}/>
       <section style={{height: "auto", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Work Experience</h1>
         <motion.div {...expMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
