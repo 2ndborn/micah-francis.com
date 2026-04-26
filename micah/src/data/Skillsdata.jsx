@@ -1,19 +1,3 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaPython,
-  FaReact,
-  FaBootstrap,
-  FaNode,
-} from "react-icons/fa";
-
-import { DiMaterializecss } from "react-icons/di";
-import { SiFlask } from "react-icons/si";
-import { SiDjango } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiMongodb } from "react-icons/si";
-
 import { GiLighthouse } from "react-icons/gi";
 import { LuSpeech } from "react-icons/lu";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -24,6 +8,11 @@ import { IoMdTime } from "react-icons/io";
 import { PiHeadCircuitFill } from "react-icons/pi";
 import { GoChecklist } from "react-icons/go";
 import { LuHeartHandshake } from "react-icons/lu";
+import { GiMeditation } from "react-icons/gi";
+import { FaRegFaceSmileBeam } from "react-icons/fa6";
+import { FaBalanceScale } from "react-icons/fa";
+import { GiStrong } from "react-icons/gi";
+import { FaEarListen } from "react-icons/fa6";
 
 export const Skills = {
     Leadership: GiLighthouse,
@@ -36,16 +25,9 @@ export const Skills = {
     CriticalThinking: PiHeadCircuitFill,
     WorkEthic: GoChecklist,
     EmotionalInteligence: LuHeartHandshake,
-    HTML: FaHtml5,
-    CSS: FaCss3Alt,
-    JavaScript: FaJs,
-    Python: FaPython,
-    MaterializeCSS: DiMaterializecss,
-    Bootstrap: FaBootstrap,
-    Flask: SiFlask,
-    Django: SiDjango,
-    React: FaReact,
-    PostgresSQL: BiLogoPostgresql,
-    MongoDB: SiMongodb,
-    Node: FaNode,
+    StressManagement: GiMeditation,
+    PositiveAttitude: FaRegFaceSmileBeam,
+    ConflictResolution: FaBalanceScale,
+    Resilience: GiStrong,
+    ActiveListening: FaEarListen,
 }
