@@ -6,6 +6,8 @@ import hairThumb from '../assets/hairisArt.png';
 import slotThumb from '../assets/slots.png';
 import mbookThumb from '../assets/mbooks.png';
 import shiftThumb from '../assets/shift.png';
+import mathgame from '../assets/mathgame.webp'
+import mg_thumb from '../assets/mg_thumb.webp'
 
 export const portfolioData = [
         {
@@ -56,12 +58,15 @@ export const portfolioData = [
         },
         {
             id: 5,
-            name: "M-Books",
-            description: "M.Books is a web application designed that enables its users to search for Japanese Manga comic that they would like to read.",
-            website: "https://m-books-7jir.onrender.com/",
-            github: "https://github.com/2ndborn/m-books",
-            languages: ["HTML", "CSS", "JavaScript", "Python"],
-            image: slots,
+            name: "Math Game",
+            description: "A game designed to make basic math fun for individuals of all ages.",
+            website: "https://2ndborn.github.io/math-game/",
+            github: "https://github.com/2ndborn/math-game",
+            languages: ["HTML", "CSS", "JavaScript"],
+            image: mathgame,
+            imageAlt: "Math-Game website image",
+            thumb: mg_thumb,
+            thumbAlt: "Math-Game website thumbnail and link to site",
             backgroundImage: "top left"
         },
     ]
