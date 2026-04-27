@@ -103,6 +103,25 @@
     transform: scale(1.05);
 }
 
+.btn {
+    font-size: 1.1rem;
+    min-width: 150px;
+    padding: 0.5rem 1rem;
+    color: var(--font-primary);
+    background-color: var(--cta-secondary);
+    border: 2px solid var(--cta-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: var(--cta-secondary);
+    background-color: hsl(300, 100%, 80%);
+    border: 2px solid var(--cta-secondary);
+    transform: scale(1.05);
+}
+
 .icon {
     color: hsl(0, 0%, 85%);
     width: clamp(3rem, 0.455rem + 12.73vw, 10rem);

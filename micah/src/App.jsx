@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
 import AboutMe from './pages/AboutMe';
+import NotFoundComponent from './components/NotFoundComponent';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/' element={<HomePage />} />
           <Route exact path='/about' element={<AboutMe />} />
           <Route exact path='/portfolio' element={<Portfolio />} />
+          <Route path='*' element={<NotFoundComponent />} />
         </Routes>
         <Footer />
       </div>
