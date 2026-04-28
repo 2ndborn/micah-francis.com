@@ -7,8 +7,8 @@ import PortCarousel from '../components/PortCarousel';
 
 const Portfolio = () => {
   
-    const [index, setIndex] = useState(0)
-    const [search, setSearch] = useState(portfolioData);
+  const [index, setIndex] = useState(0)
+  const [search, setSearch] = useState(portfolioData);
 
   const handleSearch = (event) => {
     const inputText = event.target.value.toLowerCase();
@@ -24,15 +24,24 @@ const Portfolio = () => {
     setIndex(0);
   }, [search])
 
-    const ONE_SECOND = 1000;
-    const AUTO_DELAY = ONE_SECOND * 10;
-    const DRAG_BUFFER = 50;
-    const SPRING_OPTIONS = {
-      type: 'spring',
-      mass: 3,
-      stiffness: 400,
-      damping: 50
-    }
+  const ONE_SECOND = 1000;
+  const AUTO_DELAY = ONE_SECOND * 10;
+  const DRAG_BUFFER = 50;
+  const SPRING_OPTIONS = {
+    type: 'spring',
+    mass: 3,
+    stiffness: 400,
+    damping: 50
+  }
+
+  const container = {
+    hidden: {opacity: 0},
+    show: {opacity: 1,
+      transition: {
+        duration: 1.1, 
+        ease: 'easeIn'
+      }}
+  }
 
     const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
     
@@ -67,7 +76,11 @@ const Portfolio = () => {
   }
 
   return (
-    <div>
+    <motion.div
+      variants={container}
+      initial='hidden'
+      animate='show'
+    >
       <section style={{height: "25vh", display: "flex", alignItems: "center", backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"}}>
           <h1 style={{margin: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>Portfolio</h1>
       </section>
@@ -117,7 +130,7 @@ const Portfolio = () => {
         </motion.div>
         <Dots index={index} setIndex={setIndex} search={search} />
       </section>
-    </div>
+    </motion.div>
   )
 }
 

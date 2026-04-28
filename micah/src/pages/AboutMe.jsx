@@ -54,14 +54,18 @@ const AboutMe = () => {
   
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
-  const PAD_TOP = "min(5rem, 5%)"
-  const PAD_BOT = "min(5rem, 5%)"
-  const PAD_LEFT = "min(0.5rem, 0%)"
-  const PAD_RIGHT = "min(0.5rem, 0%)"
+  const container = {
+    hidden: {opacity: 0},
+    show: {opacity: 1,transition: {duration: 1.1, ease: 'easeIn'}}
+  }
 
 
   return (
-    <div>
+    <motion.div
+      variants={container}
+      initial='hidden'
+      animate='show'
+    >
       <section style={{
         height: "25vh", 
         display: "flex", 
@@ -107,7 +111,7 @@ const AboutMe = () => {
         </motion.div>
         <DotsComponent index={expIndex} setIndex={setExpIndex} data={ExperienceData} />
       </section>
-    </div>
+    </motion.div>
   )
 }
 
