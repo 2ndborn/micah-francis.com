@@ -4,20 +4,33 @@ import styles from "../styles/Portfolio.module.css";
 import LanguageBadge from '../components/LanguageBadge';
 import {portfolioData} from '../data/portfolioData'
 import PortCarousel from '../components/PortCarousel';
+import SearchBarComponent from '../components/SearchBarComponent';
 
 const Portfolio = () => {
   
   const [index, setIndex] = useState(0)
   const [search, setSearch] = useState(portfolioData);
+  const [query, setQuery] = useState("");
+  const [noResults, setNoResult] = useState(false);
 
   const handleSearch = (event) => {
     const inputText = event.target.value.toLowerCase();
+    setQuery(event.target.value);
+
+    // If the input is empty, reset to full list
+    if (!inputText.trim()) {
+      setSearch(portfolioData);
+      setNoResult(false);
+      return;
+    }
+
     const filtered = portfolioData.filter(project =>
       project.languages.some(
         lang => lang.toLowerCase().includes(inputText)
       )
     )
     setSearch(filtered)
+    setNoResult(filtered.length === 0)
   }
 
   useEffect(() => {
@@ -82,16 +95,27 @@ const Portfolio = () => {
       animate='show'
     >
       <section style={{height: "25vh", display: "flex", alignItems: "center", backgroundImage: "linear-gradient(180deg, hsl(0, 0%, 93%) 0%, transparent 100%)"}}>
-          <h1 style={{margin: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>Portfolio</h1>
+        <h1 style={{margin: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>Portfolio</h1>
       </section>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
+      <SearchBarComponent onChange={handleSearch} noResults={noResults} value={query} />
+      {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',}}>
         <input
           style={{width: '83%', color: 'hsl(301, 33%, 40%)', padding: '0.5rem 0 0.5rem 1rem', fontSize: '1.5rem', boxShadow: '0px 2px 8px rgba(204, 0, 204, 0.1), 0px 4px 16px rgba(77, 5, 76, 0.3)', borderRadius: '5px', border: 'none', margin: '2rem 0'}}
           onChange={(event) => handleSearch(event)} 
           type="text" 
           placeholder='Search by language...' 
         />
-      </div>
+        {noResults && (
+          <p style={{
+            width: '83%',
+            margin: '0 0 1rem 0',
+            color: 'hsl(0, 70%, 45%)',
+            fontSize: '1rem'
+          }}>
+            No projects found for “{query}”.
+          </p>
+        )}
+      </div> */}
       <section style={{ position: "relative", height: "100vh", overflow: "hidden", zIndex: 0 }}>
         <motion.div
           drag="x"
