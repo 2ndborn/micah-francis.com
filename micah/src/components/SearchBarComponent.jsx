@@ -1,6 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SearchBarComponent = ({value, onChange, noResults}) => {
+    const langStyle = {
+        textDecoration: 'underline', 
+        color: 'var(--cta-secondary)', 
+        fontWeight: '700', 
+        margin: '0 2px'
+    }
 
   return (
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', }}>
@@ -14,10 +20,9 @@ const SearchBarComponent = ({value, onChange, noResults}) => {
               <p style={{
                   width: '83%',
                   margin: '0 0 1rem 0',
-                  color: 'hsl(0, 70%, 45%)',
                   fontSize: '1rem'
               }}>
-                  No projects found for “{value}”.
+                  No projects found using that the “<span style={langStyle}>{value}</span>” language.
               </p>
           )}
       </div>
