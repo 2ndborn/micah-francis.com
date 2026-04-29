@@ -55,10 +55,9 @@ const AboutMe = () => {
   const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
 
   const container = {
-    hidden: {opacity: 0},
-    show: {opacity: 1,transition: {duration: 1.1, ease: 'easeIn'}}
+    hidden: {opacity: 0, y: 20},
+    show: {opacity: 1, y: 0, transition: {duration: 0.7, ease: 'easeIn'}}
   }
-
 
   return (
     <motion.div
