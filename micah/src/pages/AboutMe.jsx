@@ -15,17 +15,17 @@ import StatementComponent from '../components/StatementComponent';
 
 const AboutMe = () => {
   const [isPaused, setIsPaused] = useState(false);
-  const {
-    index: eduIndex,
-    setIndex: setEduIndex, 
-    containerMotion: eduMotion
-  } = useCarouselMotion({
-    length: EductionData.length,
-    autoDelay: 10000,
-    dragBuffer: 50,
-    height: "80%",
-    paused: isPaused
-  })
+  // const {
+  //   index: eduIndex,
+  //   setIndex: setEduIndex, 
+  //   containerMotion: eduMotion
+  // } = useCarouselMotion({
+  //   length: EductionData.length,
+  //   autoDelay: 10000,
+  //   dragBuffer: 50,
+  //   height: "80%",
+  //   paused: isPaused
+  // })
   const {
     index: expIndex,
     setIndex: setExpIndex, 
@@ -56,7 +56,11 @@ const AboutMe = () => {
 
   const container = {
     hidden: {opacity: 0, y: 20},
-    show: {opacity: 1, y: 0, transition: {duration: 0.7, ease: 'easeIn'}}
+    show: {
+      opacity: 1, 
+      y: 0, 
+      transition: {duration: 0.7, ease: 'easeIn'}
+    }
   }
 
   return (
@@ -75,17 +79,7 @@ const AboutMe = () => {
         <h1 style={{marginLeft: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>About Me</h1>
       </section>
       <StatementComponent />
-      <section style={{ height: "auto", paddingTop: '1rem', overflow: "hidden"}}>
-        <h1 style={{ textAlign: "center"}}>Education</h1>
-        <motion.div {...eduMotion} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-        {EductionData.map((ed, i) => (
-          <CarouselCard key={i} active={eduIndex === i}>
-            <EducationComponent ed={ed} />
-          </CarouselCard>
-        ))}
-        </motion.div>
-        <DotsComponent index={eduIndex} setIndex={setEduIndex} data={EductionData} />
-      </section>
+      <EducationComponent paused={isPaused} setPaused={setIsPaused} />
       <hr style={{width: "50%", marginTop: "3rem", marginBottom: '2rem'}}/>
       <section style={{height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden"}}>
         <h1 style={{ textAlign: "center"}}>Skills & Attributes</h1>
