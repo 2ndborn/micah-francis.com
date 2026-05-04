@@ -48,7 +48,7 @@ const Portfolio = () => {
   }
 
   const container = {
-    hidden: {opacity: 0, y: 20},
+    hidden: {opacity: 0, y: 10},
     show: {
       opacity: 1, 
       y: 0, 
@@ -56,7 +56,7 @@ const Portfolio = () => {
     }
   }
 
-    const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
+  const BOX_SHADOW = "0px 2px 8px rgba(204, 0, 204, 0.7), 0px 4px 16px rgba(77, 5, 76, 0.9)";
     
   const dragX = useMotionValue(0);
   
@@ -112,9 +112,9 @@ const Portfolio = () => {
           onDragEnd={onDragEnd}
           style={{x: dragX, display: "flex", alignItems: 'center', cursor: 'grab', height: "90%" }}
         >
-          {search.map((ext, i) => (
+          {search.map((proj, i) => (
             <motion.div
-              key={ext.id}
+              key={proj.id}
               style={{
                 position: 'relative',
                 height: "100%", 
@@ -133,7 +133,7 @@ const Portfolio = () => {
               }}
               transition={{scale: SPRING_OPTIONS, boxShadow: {duration: 0.4, ease: "easeOut", delay: 0.2}}}
             >
-              <PortCarousel objectPosition={ext.backgroundImage} {...ext} />
+              <PortCarousel objectPosition={proj.backgroundImage} {...proj} />
             </motion.div>
           ))}
 

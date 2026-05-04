@@ -60,7 +60,7 @@ const HomePage = () => {
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
       </section>
-      <section className={styles.secTwo}>
+      <section className={styles.secTwo} style={{overflowX: 'hidden'}}>
         {HomePageData.map((home, i) => (
           <InfiniteScroll 
             key={i}

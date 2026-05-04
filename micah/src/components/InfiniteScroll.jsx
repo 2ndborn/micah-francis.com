@@ -5,7 +5,7 @@ import styles from '../styles/HomePage.module.css';
 
 const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default' }) => {
     const ref = useRef(null);
-    const inView = useInView(ref, {once: false});
+    const inView = useInView(ref, {once: false, amount: 0.3});
     const mainControls = useAnimation();
     const contentControls = useAnimation();
 
@@ -29,11 +29,11 @@ const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default'
     return (
         <div ref={ref} className={styles.cardContainer}>
             <motion.div
-            variants={container}
-            initial="hidden"
-            animate={mainControls}
-            transition={{duration: 1, delay: 0.5}}
-            className={styles.scrollContainer}
+                variants={container}
+                initial="hidden"
+                animate={mainControls}
+                transition={{duration: 1, delay: 0.5}}
+                className={styles.scrollContainer}
             >
                 <div className={styles.infiniteScroll}>
                     {icons.concat(icons).map((icon, i) =>

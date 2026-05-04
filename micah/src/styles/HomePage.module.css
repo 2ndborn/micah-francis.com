@@ -43,6 +43,13 @@
     overflow: hidden;
 }
 
+.innerWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
 .scrollOverlay {
     position: absolute;
     inset: 0;
@@ -66,7 +73,7 @@
     justify-content: center;
     align-items: center;
     width: max-content;
-    height: 75%;
+    height: 200%;
     animation: scroll 20s linear infinite;
 }
 
@@ -82,8 +89,8 @@
 }
 
 @keyframes scroll {
-    0% {transform: translateX(-50%);}
-    100% {transform: translateX(0);}
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
 }
 
 .ctaBtn {

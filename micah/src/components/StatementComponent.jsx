@@ -35,17 +35,6 @@ const StatementComponent = () => {
                     </p>
                     
                 </div>
-                {/* <p>
-                    I’m a full‑stack web developer with a strong foundation
-                    in HTML, CSS, JavaScript, and Python, supported by a Level
-                    5 Diploma from Code Institute. My background in leadership
-                    and customer‑focused roles shapes the way I build digital
-                    products always with clarity, usability, and real human
-                    needs in mind. I enjoy creating clean, purposeful
-                    applications and I’m continually expanding my skills,
-                    currently exploring React and sharpening my
-                    problem‑solving through LeetCode.
-                </p> */}
                 <AnimatePresence>
                     {showMore && (
                         <motion.div
@@ -79,7 +68,6 @@ const StatementComponent = () => {
                     {!showMore ? "See more" : "See less"}
                 </button>
             </div>
-            <hr style={{width: "90%", marginTop: "3rem"}}/>
         </section>
     )
 }
