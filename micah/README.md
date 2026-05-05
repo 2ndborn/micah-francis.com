@@ -1,11 +1,11 @@
-# Micah-Francis.com
+# MICAH-FRANCIS.COM
 Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
 
 ![](./docs/assets/responsive.webp)
 
-## Mission Statement
+## MISSION STATEMENT
 To demonstrate my craft as a developer through thoughtful design, clean engineering, and real projects connecting with people and opportunities that value quality and collaboration.
-## User Stories
+## USER STORIES
 ### `Navigation`
 -   I want to navigate between the Home, About Me, and Portfolio pages so that I can freely explore the site.
 -   I want to be able to visually identify which page I am on using the navigation bar so that I know where I am.
@@ -28,9 +28,9 @@ ___
 ___
 ### `Contact`
 * I want to view links to the owners social media and other contact details.
-## Future Features
+## FUTURE FEATURES
 * Owner would like to add a blog so that they can support beginners along their coding journey.
-## Colour & Typography
+## COLOUR & TYPOGRAPHY
 ### `Colour`
 ||Fonts|CTA Buttons|Buttons(border)|Body|
 |-|-|-|-|-|
@@ -65,7 +65,7 @@ ___
 * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 * [Am I Responsive](https://fireship.dev/amiresponsive?) to showcase the site responsiveness.
 
-## Fixed bugs
+## FIXED BUGS
 ### Disappearing "See more" button
 I originally asked AI to help me implement a “See more” button that would reveal the remainder of a list. The solution worked in terms of expanding the list, but the button itself disappeared after being clicked.I had asked AI to help me to code a see more button that would reveal the remainder of a list. The solution it provided would reveal the the list but the button would disappear. 
 
@@ -184,30 +184,33 @@ By adding an amount I could ensure that that animation won't fire until 30% of t
 	</div>
 By requiring 30% of the element to be visible before triggering the animation, the overflow issue was resolved and the animation now fires at the correct time.
 
-## Testing
+## TESTING
 Click here to view [Tests](../micah/TESTING.md)
 
 ## LOCAL DEVELOPMENT
 ### Clone Repository
-1. Login/Sign up to [GitHub]([GitHub](https://github.com/)
-2. Go to the project repository [Math-Game]([2ndborn/math-game](https://github.com/2ndborn/math-game)
+1. Login/Sign up to [GitHub](https://github.com/)
+2. Go to the project repository [micah-francis.com](https://2ndborn.github.io/micah-francis.com/#/)
 3. Click on the green code button, select whether you would like to clone with **HTTPS**, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory. ls (list the files and folder) cd <name of location/directory>(change directory)
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
-6. Install Vite: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+6. Install Vite: 
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
 	  <pre><code>
 	  npm create vite@latest
 	  </code></pre>
 	</div>
 7. Pick a project name: micah-francis.com
 8. Select a variable: For this project pick JavaScript + SWC
-9. Lauch the React app in the browser: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+9. Lauch the React app in the browser: 
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
 	  <pre><code>
 		cd micah-francis.com
 		npm run dev
 	  </code></pre>
 	</div>
-10. You should see the following: <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+10. You should see the following: 
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
 	  <pre><code>
 	  ➜ Local: http://localhost:5173/ 
 	  ➜ Network: use --host to expose 
@@ -215,6 +218,7 @@ Click here to view [Tests](../micah/TESTING.md)
 	  *Click the Local: link to open the browswer*
 	  </code></pre>
 	</div>
+	
 ## Deployment
 Deployment is slightly different because of the use of the React Framework. 
 #### 1. **Install the** `gh-pages` **package**
