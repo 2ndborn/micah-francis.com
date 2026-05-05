@@ -176,7 +176,9 @@ By adding an amount I could ensure that that animation won't fire until 30% of t
 	  <pre><code>	const  inView  =  useInView(ref, {once: false, amount: 0.3}); </code></pre>
 	</div>
 By requiring 30% of the element to be visible before triggering the animation, the overflow issue was resolved and the animation now fires at the correct time.
+
 [## Testing](../micah/TESTING.md)
+
 ## LOCAL DEVELOPMENT
 ### Clone Repository
 1. Login/Sign up to [GitHub]([GitHub](https://github.com/)
