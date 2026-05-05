@@ -208,8 +208,87 @@ Click here to view [Tests](../micah/TESTING.md)
 	  </code></pre>
 	</div>
 ## Deployment
-1. Go to the project repository [micah-francis.com](https://github.com/2ndborn/micah-francis.com/tree/main)
-2. Go to settings, located at the top.
-3. Go to pages, located on the left under **Code and automation.**
-4. Under **Branch** switch from **None** to **Main**, then save.
-5. You should now see the site address at the top of the page.
+Deployment is slightly different because of the use of the React Framework. 
+#### 1. **Install the** `gh-pages` **package**
+This package handles publishing the Vite build output to a dedicated `gh-pages` branch.
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>npm install gh-pages --save-dev</code></pre>
+</div>
+
+#### 2. **Add the** `homepage` **field to** `package.json`
+
+This ensures Vite builds assets with the correct absolute paths for GitHub Pages.
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>"homepage": "https://2ndborn.github.io/micah-francis.com"
+</code></pre>
+</div>
+
+#### **3. Add deploy scripts to** `package.json`
+
+These scripts build the project and publish the `dist` folder to the `gh-pages` branch.
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+</code></pre>
+</div>
+
+#### **4. Configure Vite with the correct base path**
+
+GitHub Pages serves the project from a sub‑directory, so Vite must know the repo name.
+
+In `vite.config.js`:
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>export default defineConfig({
+  plugins: [react()],
+  base: '/micah-francis.com/'
+})
+</code></pre>
+</div>
+
+#### **5. Add a** `404.html` **redirect for GitHub Pages**
+
+GitHub Pages does not support SPA routing. To prevent refresh/navigation 404s, add this file:
+
+`public/404.html`
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code><!DOCTYPE html><html> <head>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body></body>
+</html>
+</code></pre>
+</div>
+
+#### **6. Switch React Router to** `HashRouter`
+
+GitHub Pages cannot handle BrowserRouter’s history API. HashRouter ensures routing works without server rewrites.
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>import { HashRouter as Router } from "react-router-dom";
+<Router>
+  <App />
+</Router>
+</code></pre>
+</div>
+
+#### 7. Deploy the site
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>npm run deploy
+</code></pre>
+</div>
+
+#### 8. Configure GitHub Pages
+In the repository:
+
+**Settings → Pages**
+
+-   **Source:** `Deploy from a branch`
+-   **Branch:** `gh-pages`
+-   **Folder:** `/root`
+    
+Save the settings.
+
+#### 9. Access the live site
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>https://2ndborn.github.io/micah-francis.com/
+</code></pre>
+</div>
