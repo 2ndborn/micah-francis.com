@@ -260,6 +260,7 @@ html>
 /html>
 </code></pre>
 </div>
+(The missing < from the above code is because markup would not allow it)
 
 #### **6. Switch React Router to** `HashRouter`
 
@@ -269,7 +270,7 @@ GitHub Pages cannot handle BrowserRouter’s history API. HashRouter ensures rou
 	App />
 /Router></code></pre>
 </div>
-
+(The missing < from the above code is because markup would not allow it)
 #### 7. Deploy the site
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
 <pre><code>npm run deploy
