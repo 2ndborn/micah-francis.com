@@ -1,5 +1,6 @@
 # Micah-Francis.com
 Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
+
 ![](./docs/assets/responsive.webp)
 
 ## Mission Statement

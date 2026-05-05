@@ -33,12 +33,16 @@ const ExperienceCard = ({ paused, setPaused }) => {
             return next;
         })
     }
+
+    const BACK_IMAGE = 
+    'linear-gradient(180deg, hsl(0, 0%, 90%) 0%, #fff 100%)'
+
     return (
         <section style={{ height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
             <h1 style={{ textAlign: "center" }}>Work Experience</h1>
             <motion.div {...expMotion} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
                 {ExperienceData.map((ex, i) => (
-                    <CarouselCard key={i} active={expIndex === i}>
+                    <CarouselCard key={i} active={expIndex === i} backgroundImage={BACK_IMAGE}>
                         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%" }}>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, marginTop: "2rem" }}>
                                 <h2 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))", color: 'rgb(118, 58, 117)' }}>{ex.company}</h2>

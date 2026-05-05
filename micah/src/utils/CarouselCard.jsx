@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-const CarouselCard = ({ active, children, height }) => {
+const CarouselCard = ({ active, children, height, backgroundImage }) => {
     const SPRING_OPTIONS = {
       type: 'spring',
       mass: 3,
@@ -24,6 +24,7 @@ const CarouselCard = ({ active, children, height }) => {
                 backfaceVisibility: "hidden",
                 padding: "0.25rem",
                 overflow: 'hidden',
+                backgroundImage: backgroundImage
             }}
             
             animate={{

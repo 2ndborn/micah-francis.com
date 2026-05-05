@@ -19,12 +19,15 @@ const EducationComponent = ({ paused, setPaused }) => {
       paused
     })
 
+    const BACK_IMAGE = 
+    'linear-gradient(180deg, hsl(0, 0%, 90%) 0%, #fff 100%)'
+
   return (
     <section style={{ height: "auto", paddingTop: '1rem', overflow: "hidden" }}>
       <h1 style={{ textAlign: "center" }}>Education</h1>
       <motion.div {...eduMotion} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         {EductionData.map((ed, i) => (
-          <CarouselCard key={i} active={eduIndex === i}>
+          <CarouselCard key={i} active={eduIndex === i} backgroundImage={BACK_IMAGE}>
             <div className={styles.EducationGrid}>
               <div className={styles.qualification}>
                 <h2>{ed.qualification}</h2>

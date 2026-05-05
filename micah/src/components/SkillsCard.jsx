@@ -31,12 +31,15 @@ const SkillsCard = ({ paused, setPaused }) => {
         })
     }
 
+    const BACK_IMAGE = 
+    'linear-gradient(180deg, hsl(0, 0%, 90%) 0%, #fff 100%)'
+
     return (
         <section style={{ height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
             <h1 style={{ textAlign: "center" }}>Skills & Attributes</h1>
             <motion.div {...skillsMotion} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
                 {attributes.map((att, i) => (
-                    <CarouselCard key={i} active={skillsIndex === i}>
+                    <CarouselCard key={i} active={skillsIndex === i} backgroundImage={BACK_IMAGE}>
                         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%", }}>
                             <div
                                 style={{
