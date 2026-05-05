@@ -251,23 +251,23 @@ GitHub Pages does not support SPA routing. To prevent refresh/navigation 404s, a
 
 `public/404.html`
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code><!DOCTYPE html><html> <head>
-    <meta http-equiv="refresh" content="0; url=/" />
-  </head>
-  <body></body>
-</html>
+<pre><code>!DOCTYPE html>
+html> 
+	head>
+	    meta http-equiv="refresh" content="0; url=/" />
+	/head>
+	body>/body>
+/html>
 </code></pre>
 </div>
 
 #### **6. Switch React Router to** `HashRouter`
 
 GitHub Pages cannot handle BrowserRouter’s history API. HashRouter ensures routing works without server rewrites.
-<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>import { HashRouter as Router } from "react-router-dom";
-<Router>
-  <App />
-</Router>
-</code></pre>
+<pre><code>import { HashRouter as Router } from "react-router-dom";</code></pre></div>
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;"><pre><code>Router>
+	App />
+/Router></code></pre>
 </div>
 
 #### 7. Deploy the site
