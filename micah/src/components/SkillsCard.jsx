@@ -18,7 +18,7 @@ const SkillsCard = ({ paused, setPaused }) => {
          containerMotion: skillsMotion
       } = useCarouselMotion({
         length: attributes.length,
-        autoDelay: 100000,
+        autoDelay: 10000,
         dragBuffer: 50,
         height: "auto",
         paused
