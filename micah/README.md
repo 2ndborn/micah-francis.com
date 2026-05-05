@@ -1,4 +1,9 @@
-# Micah Francis
+# Micah-Francis.com
+Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
+![](./docs/assets/responsive.webp)
+
+## Mission Statement
+To demonstrate my craft as a developer through thoughtful design, clean engineering, and real projects connecting with people and opportunities that value quality and collaboration.
 ## User Stories
 ### `Navigation`
 -   I want to navigate between the Home, About Me, and Portfolio pages so that I can freely explore the site.
@@ -57,6 +62,7 @@ ___
 * [JPG Converter | CloudConvert](https://cloudconvert.com/jpg-converter)
 * [The W3C Markup Validation Service](https://validator.w3.org/)
 * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
+* [Am I Responsive](https://fireship.dev/amiresponsive?) to showcase the site responsiveness.
 
 ## Fixed bugs
 ### Disappearing "See more" button

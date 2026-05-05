@@ -1,5 +1,5 @@
 # Micah-Francis.com Testing
-Visit the deployed site: [micah-francis.com](https://karahaircare.co.uk)
+Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
 ## CONTENTS
 ## AUTOMATED TESTING
 ### W3C Validator
