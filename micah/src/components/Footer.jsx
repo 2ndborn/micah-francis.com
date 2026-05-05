@@ -23,7 +23,7 @@ const Footer = () => {
             <div className={styles.upperFooter}>
                 <a
                     href='https:/wa.me/447958774171?text=Hi Micah'
-                    target='_black'
+                    target='_blank'
                     aria-label='Chat via WhatsApp'
                     rel='noopener noreferrer'
                 >
@@ -31,7 +31,7 @@ const Footer = () => {
                     <i className="fa-brands fa-whatsapp"></i>
                 </a>
                 <a
-                    href='mailto: mfrancisr@hotmail.com?subject=Enquiry&body=Hi Micah'
+                    href='mailto:mfrancisr@hotmail.com?subject=Enquiry&body=Hi Micah'
                     aria-label='Contact me via email'
                 >
                     Email
@@ -41,7 +41,7 @@ const Footer = () => {
                     href='https://www.linkedin.com/in/micah-francis-87bb0832/'
                     target='_blank'
                     aria-label='Visit my LinkedIn page'
-                    rel='noopener noreferer'
+                    rel='noopener noreferrer'
                 >
                     LinkedIn
                     <i className="fa-brands fa-linkedin"></i>

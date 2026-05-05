@@ -2,6 +2,9 @@
 Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
 ## CONTENTS
 ## AUTOMATED TESTING
+* [Home page]()
+* [About me page]()
+* [Portfolio page]()
 ### W3C Validator
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 ### JavaScript Validator

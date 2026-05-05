@@ -49,16 +49,16 @@ const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default'
                     >
                         {paragraph}
                     </motion.p>
-                    <Link to={link}>
-                    <motion.button
+                    <motion.Link
+                        to={link}
                         variants={contents}
                         initial="hidden"
                         animate={contentControls}
                         transition={{ duration: 0.5, delay: 1.5 }}
-                        className={styles.ctaBtn}>
+                        className={styles.ctaBtn}
+                    >
                         {button}
-                    </motion.button>
-                    </Link>
+                    </motion.Link>
                 </div>
             </motion.div>
         </div>
