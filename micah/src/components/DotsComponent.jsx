@@ -10,6 +10,8 @@ const DotsComponent = ({index, setIndex, data}) => {
                     onClick={() => setIndex(i)}
                     style={{ height: '12px', width: '12px', borderRadius: '1000px', border: 'none', padding: 0, cursor: 'pointer' }}
                     className={`${styles.dots} ${i === index ? styles.dotsActive : ""}`}
+                    aria-label={`Go to project card ${i + 1}`}
+                    aria-current={i === index ? "true" : undefined}
                 />
             ))}
         </div>
