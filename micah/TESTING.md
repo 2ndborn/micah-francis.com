@@ -24,30 +24,30 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 `Navigation`
 | Goals | How are they achieved? | Evidence |
 | :--- | :--- | :--- |
-| I want to gain access to the Home, About me and Portfolio pages via the nav bar, | A Navbar within a hamburger menu links to all pages of the site is utilised. | ![Navbar](./docs/assets/nav.png) |
+| I want to gain access to the Home, About me and Portfolio pages via the nav bar, | A Navbar within a hamburger menu links to all pages of the site is utilised. | [Navbar](./docs/assets/nav.png) |
 | I want to able to visually identify what page I am on using the nav bar so that I can know what page I am on. | Active page has a font color of hsl(300,  100%,  40%)| See above |
 
 `Home Page`
 |  Goals | How are they achieved? | Evidence |
 | :--- | :--- | :--- |
-| I want to be able to view introductory page, so that I can can understand the theme of the website. | Users are introduced to a home page that says "Micah Francis Fullstack Developer" | ![Image of homepage](./docs/assets/homepage.png) |
+| I want to be able to view introductory page, so that I can can understand the theme of the website. | Users are introduced to a home page that says "Micah Francis Fullstack Developer" | [Image of homepage](./docs/assets/homepage.png) |
 
 `About me`
 | Goal | How  is this achieved | Evidence |
 | --- | --- | --- |
-| I want to read a short bio, so that I understand the owners background and level of experience.|Users can scroll through the owners Executive statement, Education, Skills and Work experience, with a "See more" button if they want to learn more.  |![image of the owners bio](./docs/assets/aboutmepage.png)|
+| I want to read a short bio, so that I understand the owners background and level of experience.|Users can scroll through the owners Executive statement, Education, Skills and Work experience, with a "See more" button if they want to learn more.  |[image of the owners bio](./docs/assets/aboutmepage.png)|
 
 
 `Portfolio`
 | Goal | How  is this achieved | Evidence |
 | --- | --- | --- |
-| I want to view the owners work, so that I can understand the range their capabilities.|Users can view a range of the owners web development projects|![Image of various picture](./docs/assets/portfoliopage.png)|
+| I want to view the owners work, so that I can understand the range their capabilities.|Users can view a range of the owners web development projects|[Image of various picture](./docs/assets/portfoliopage.png)|
 | I want to have links to the live sites and the GitHub site, so I can experience the site and look at the code|Users can click image icons to visit either the live site or the GitHub site.|See above|
 
 `Contact`
 | Goal | How  is this achieved | Evidence |
 | --- | --- | --- |
-| I want to be able to contact the owner, so that I can book or enquire about a consultation.|User can contact the owner via WhatsApp, Email, LinkedIn and GitHub by clicking one of the 4 button in the footer of each page.|![Image of the Contact page](./docs/assets/footer.png)|
+| I want to be able to contact the owner, so that I can book or enquire about a consultation.|User can contact the owner via WhatsApp, Email, LinkedIn and GitHub by clicking one of the 4 button in the footer of each page.|[Image of the Contact page](./docs/assets/footer.png)|
 
 `General`
 | Goal | How  is this achieved | Evidence |
