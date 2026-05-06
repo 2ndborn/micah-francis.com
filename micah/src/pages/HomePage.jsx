@@ -59,7 +59,9 @@ const HomePage = () => {
           <div>
             <motion.h1 variants={text}>Micah Francis</motion.h1>
           </div>
-          <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
+          <div>
+            <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
+          </div>
         </motion.div>
       </section>
       <section className={styles.secTwo} style={{overflowX: 'hidden'}}>
