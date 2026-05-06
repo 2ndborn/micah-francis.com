@@ -24,7 +24,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 | Goals | How are they achieved? | Evidence |
 | :--- | :--- | :--- |
 | I want to gain access to the Home, About me and Portfolio pages via the nav bar, | A Navbar within a hamburger menu links to all pages of the site is utilised. | ![Navbar]() |
-| I want to able to visually identify what page I am on using the nav bar so that I can know what page I am on. | Active page has a font color of hsl(300,  100%,  40%)| ![Navbar]() |
+| I want to able to visually identify what page I am on using the nav bar so that I can know what page I am on. | Active page has a font color of hsl(300,  100%,  40%)| See above |
 
 `Home Page`
 |  Goals | How are they achieved? | Evidence |
@@ -37,7 +37,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 | I want to read a short bio, so that I understand the owners background and level of experience.|Users can scroll through the owners Executive statement, Education, Skills and Work experience, with a "See more" button if they want to learn more.  |![image of the owners bio]()|
 
 
-`Gallery`
+`Portfolio`
 | Goal | How  is this achieved | Evidence |
 | --- | --- | --- |
 | I want to view the owners work, so that I can understand the range their capabilities.|Users can view a range of the owners web development projects|![Image of various picture]()|
@@ -51,8 +51,8 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 `General`
 | Goal | How  is this achieved | Evidence |
 | --- | --- | --- |
-| I want to be able see the contact details of the user throughout the site, so that I can use alternative means to make contact.|Users can see the owners Email and Mobile number in the footer.|![Image of the Footer]()|
-| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.|![Homepage]()|
+| I want to be able see the contact details of the user throughout the site, so that I can use alternative means to make contact.|Users can see the owners Email and Mobile number in the footer.|See above|
+| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.|See top of the [Readme.md](./README.md)|
 - - -
 
 ### Full Testing
