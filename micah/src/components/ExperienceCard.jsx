@@ -90,6 +90,7 @@ const ExperienceCard = ({ paused, setPaused }) => {
                                         <button 
                                             onClick={() => toggle(i)}
                                             className={styles.ctaBtn}
+                                            aria-label={showMore !== i ? "Show more content" : "Show less content"}
                                         >
                                             {showMore !== i ? "See more" : "See less"}
                                         </button>

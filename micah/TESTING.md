@@ -2,6 +2,8 @@
 Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-francis.com/)
 ## CONTENTS
 ## AUTOMATED TESTING
+### W3C Validator
+[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 * [Home page](./docs/assets/validator.w3.org_nu_home.webp) - Error aren't fixable because of the React Single Page Application.
 * [About me page](./docs/assets/validator.w3.org_nu_aboutme.webp) - Error aren't fixable because of the React Single Page Application.
 * [Portfolio page](./docs/assets/validator.w3.org_nu_portfolio.webp) - Error aren't fixable because of the React Single Page Application.
@@ -12,9 +14,6 @@ Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-fra
 * [Portfolio.css](./docs/assets/validator.w3.org_nu_portfolio.css.webp)
 * [Navbar.css](./docs/assets/validator.w3.org_nu_navbar.css.webp)
 * [Footer.css](./docs/assets/validator.w3.org_nu_footer.css.webp)
-### W3C Validator
-[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
-### JavaScript Validator
 ## MANUAL TESTING
 ### Testing User Stories
 

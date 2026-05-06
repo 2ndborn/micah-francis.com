@@ -70,6 +70,7 @@ const PortCarousel = ({
           </motion.a>
           <motion.a
             href={github}
+            aria-label="View project on GitHub"
             target='_blank'
             rel='noopener noreferrer'
             style={{

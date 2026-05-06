@@ -56,14 +56,20 @@ ___
 * VSCode
 * [Vite](https://vite.dev/)
 * [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+* [React Icons](https://react-icons.github.io/react-icons/)
 * [Motion — JavaScript & React animation library](https://motion.dev/)
 * Microsoft Copilot
 * [Google Fonts](https://fonts.google.com/)
 * [Font Awesome version 5](https://fontawesome.com/)
+* [Min-Max-Value Interpolation](https://min-max-calculator.9elements.com/?16,24,320,1200)
 * [JPG Converter | CloudConvert](https://cloudconvert.com/jpg-converter)
 * [The W3C Markup Validation Service](https://validator.w3.org/)
-* [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 * [Am I Responsive](https://fireship.dev/amiresponsive?) to showcase the site responsiveness.
+* [Onscroll Reveal - YouTube](https://youtu.be/hjbxaYTMhy0?si=dFogMyiv__poEE0v)
+* [Dragging Carousel tutorial](https://youtu.be/mn_fh7pRj7w?si=0xuw_aXHdZiW_NKL)
+* [Scrolling tutorial](https://youtu.be/mn_fh7pRj7w?si=0xuw_aXHdZiW_NKL)
+* [Loading: Pulse dots - Motion Tutorial](https://motion.dev/tutorials/react-loading-three-dots-pulse)
+* [gh-pages - npm](https://www.npmjs.com/package/gh-pages)
 
 ## FIXED BUGS
 ### Disappearing "See more" button
