@@ -22,7 +22,7 @@ const Footer = () => {
             <h2 style={{ textAlign: "center" }}>Contact</h2>
             <div className={styles.upperFooter}>
                 <a
-                    href='https:/wa.me/447958774171?text=Hi Micah'
+                    href='https://wa.me/447958774171?text=Hi Micah'
                     target='_blank'
                     aria-label='Chat via WhatsApp'
                     rel='noopener noreferrer'

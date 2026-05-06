@@ -8,6 +8,7 @@ const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default'
     const inView = useInView(ref, {once: false, amount: 0.3});
     const mainControls = useAnimation();
     const contentControls = useAnimation();
+    const MotionLink = motion(Link)
 
     const container = {
         hidden: { opacity: 0, x: x },
@@ -49,16 +50,17 @@ const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default'
                     >
                         {paragraph}
                     </motion.p>
-                    <motion.Link
-                        to={link}
+                    <motion.div
+                        style={{display: 'inline-block', transform: 'translateZ(0)'}}
                         variants={contents}
                         initial="hidden"
                         animate={contentControls}
                         transition={{ duration: 0.5, delay: 1.5 }}
-                        className={styles.ctaBtn}
                     >
-                        {button}
-                    </motion.Link>
+                        <Link to={link} className={styles.ctaBtn}>
+                            {button}
+                        </Link>
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
