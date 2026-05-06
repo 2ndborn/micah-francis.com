@@ -7,6 +7,7 @@ Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-fra
 * [Home page](./docs/assets/validator.w3.org_nu_home.webp) - Error aren't fixable because of the React Single Page Application.
 * [About me page](./docs/assets/validator.w3.org_nu_aboutme.webp) - Error aren't fixable because of the React Single Page Application.
 * [Portfolio page](./docs/assets/validator.w3.org_nu_portfolio.webp) - Error aren't fixable because of the React Single Page Application.
+* [404 error page](./docs/assets/validator.w3.org_nu_404.png)
 * [App.css](./docs/assets/validator.w3.org_nu_app.css.webp)
 * [Index.css](./docs/assets/validator.w3.org_nu_index.css.webp)
 * [Home.css](./docs/assets/validator.w3.org_nu_home.css.webp)
