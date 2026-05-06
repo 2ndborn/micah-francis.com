@@ -14,6 +14,9 @@ Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-fra
 * [Portfolio.css](./docs/assets/validator.w3.org_nu_portfolio.css.webp)
 * [Navbar.css](./docs/assets/validator.w3.org_nu_navbar.css.webp)
 * [Footer.css](./docs/assets/validator.w3.org_nu_footer.css.webp)
+### **Performance & Accessibility Testing**
+
+This project was evaluated using **Google Lighthouse** to ensure strong performance, accessibility, best practices, and SEO. The site achieved high scores across all categories, confirming that it is fast, accessible, and built following modern web standards.
 ## MANUAL TESTING
 ### Testing User Stories
 
