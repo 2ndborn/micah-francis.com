@@ -56,7 +56,9 @@ const HomePage = () => {
           initial="hidden"
           animate={["show", "shadow"]}
         >
-          <motion.h1 variants={text}>Micah Francis</motion.h1>
+          <div>
+            <motion.h1 variants={text}>Micah Francis</motion.h1>
+          </div>
           <motion.h3 variants={textTwo}>Fullstack Developer</motion.h3>
         </motion.div>
       </section>

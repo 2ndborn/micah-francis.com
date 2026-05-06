@@ -22,7 +22,7 @@ const Footer = () => {
             <h2 style={{ textAlign: "center" }}>Contact</h2>
             <div className={styles.upperFooter}>
                 <a
-                    href='https://wa.me/447958774171?text=Hi Micah'
+                    href='https://wa.me/447958774171?text=Hi%20Micah'
                     target='_blank'
                     aria-label='Chat via WhatsApp'
                     rel='noopener noreferrer'
@@ -31,7 +31,7 @@ const Footer = () => {
                     <i className="fa-brands fa-whatsapp"></i>
                 </a>
                 <a
-                    href='mailto:mfrancisr@hotmail.com?subject=Enquiry&body=Hi Micah'
+                    href='mailto:mfrancisr@hotmail.com?subject=Enquiry&body=Hi%20Micah'
                     aria-label='Contact me via email'
                 >
                     Email
