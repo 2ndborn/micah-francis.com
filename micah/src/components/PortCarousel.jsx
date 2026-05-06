@@ -50,7 +50,7 @@ const PortCarousel = ({
           justifyContent: "space-evenly",
           alignItems: "center"
         }}>
-          <motion.a href={website} target='_blank' rel='noopener noreferer' style={{
+          <motion.a href={website} target='_blank' rel='noopener noreferrer' style={{
             height: "clamp(1.875rem, 0.739rem + 5.68vw, 5rem)", 
             width: "clamp(3.438rem, 1.165rem + 11.36vw, 9.688rem)", 
             padding: 0,
@@ -71,7 +71,7 @@ const PortCarousel = ({
           <motion.a
             href={github}
             target='_blank'
-            rel='noopener noreferer'
+            rel='noopener noreferrer'
             style={{
             display: "flex",
             justifyContent: "center",

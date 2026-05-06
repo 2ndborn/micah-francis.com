@@ -22,7 +22,9 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/HairIsArt",
             languages: ["HTML", "CSS", "JavaScript"],
             image: hairIsArt,
+            imageAlt: "Hair Is Art website image",
             thumb: hairThumb,
+            thumbAlt: "Hair Is Art website thumbnail and link to site",
             backgroundImage: "top left"
         },
         {
@@ -33,7 +35,9 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/slots-project",
             languages: ["HTML", "CSS", "JavaScript"],
             image: slots,
+            imageAlt: "Slots website image",
             thumb: slotThumb,
+            thumbAlt: "Slots website thumbnail and link to site",
             backgroundImage: "top left"
         },
         {
@@ -44,7 +48,9 @@ export const portfolioData = [
             github: "https://github.com/2ndborn/m-books",
             languages: ["HTML", "CSS", "JavaScript", "Python", "MaterializeCSS", "Flask", "MongoDB"],
             image: mbooks,
+            imageAlt: "M-Books website image",
             thumb: mbookThumb,
+            thumbAlt: "M-Books website thumbnail and link to site",
             backgroundImage: "top left"
         },
         {
