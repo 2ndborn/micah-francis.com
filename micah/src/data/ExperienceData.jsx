@@ -5,11 +5,19 @@ export const ExperienceData = [
         role: "Executive Officer",
         dates: "Jan 2024 - Present",
         achievements: [
-            "Recognised for driving childcare cost support adoption, contributing to the branch achieving the highest uptake in the South East region.",
-            "Engineered and deployed a coaching tool, increasing childcare cost support uptake by 80%.",
-            "Collaborated with stakeholders to deliver upskilling programs, achieving an 22% employment success rate.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est vitae magni enim voluptate alias, modi ipsum dolore esse saepe dignissimos officia voluptatem reprehenderit dolor eveniet deserunt impedit totam mollitia.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est vitae magni enim voluptate alias, modi ipsum dolore esse saepe dignissimos officia voluptatem reprehenderit dolor eveniet deserunt impedit totam mollitia.",
+            `Recognised for driving childcare cost‑support adoption, 
+            contributing to the branch achieving the highest uptake in 
+            the South East region.`,
+            `Designed and deployed a coaching tool that increased 
+            childcare cost‑support uptake by 80%.`,
+            `Supported the migration of the Flexible Support Fund 
+            application process from paper to digital, reducing the 
+            office’s carbon footprint by 5%.`,
+            `Collaborated with stakeholders to deliver youth upskilling 
+            programmes, achieving a 22% employment success rate.`,
+            `Improved annual People Survey results by fostering a 
+            multicultural working environment, celebrating the 
+            achievements of all heritages on a monthly basis.`,
         ]
     },
     {

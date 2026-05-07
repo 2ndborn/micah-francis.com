@@ -7,23 +7,17 @@ import { useCarouselMotion } from '../hooks/useCarouselMotion';
 import CarouselCard from '../utils/CarouselCard';
 
 const ExperienceCard = ({ paused, setPaused }) => {
-    // const [showMore, setShowMore] = useState(false);
     const [showMore, setShowMore] = useState(null);
-    // const closeShowMore = () => {
-    //     setShowMore(false);
-    //     setPaused(false);
-    // }
     const {
         index: expIndex,
         setIndex: setExpIndex, 
         containerMotion: expMotion
       } = useCarouselMotion({
         length: ExperienceData.length,
-        autoDelay: 10000,
+        autoDelay: 15000,
         dragBuffer: 50,
         height: "auto",
         paused,
-        // onManuelDrag: closeShowMore,
       })
 
     const toggle = (i) => {
@@ -40,7 +34,7 @@ const ExperienceCard = ({ paused, setPaused }) => {
     return (
         <section style={{ height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
             <h1 style={{ textAlign: "center" }}>Work Experience</h1>
-            <motion.div {...expMotion} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+            <motion.div {...expMotion}>
                 {ExperienceData.map((ex, i) => (
                     <CarouselCard key={i} active={expIndex === i} backgroundImage={BACK_IMAGE}>
                         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%" }}>

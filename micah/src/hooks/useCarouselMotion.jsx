@@ -43,6 +43,7 @@ export function useCarouselMotion({
   const containerMotion = {
     drag: "x",
     dragConstraints: { left: 0, right: 0 },
+    
     animate: { translateX: `-${index * 100}%` },
     transition: spring,
     whileTap: { cursor: "grabbing" },

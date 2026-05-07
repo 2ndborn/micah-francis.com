@@ -9,22 +9,22 @@ import SearchBarComponent from '../components/SearchBarComponent';
 const Portfolio = () => {
   
   const [index, setIndex] = useState(0)
-  const [search, setSearch] = useState(portfolioData);
+  const [search, setSearch] = useState([...portfolioData].reverse());
   const [query, setQuery] = useState("");
   const [noResults, setNoResult] = useState(false);
-
   const handleSearch = (event) => {
+    const portfolio = [...portfolioData].reverse()
     const inputText = event.target.value.toLowerCase();
     setQuery(event.target.value);
 
     // If the input is empty, reset to full list
     if (!inputText.trim()) {
-      setSearch(portfolioData);
+      setSearch(portfolio);
       setNoResult(false);
       return;
     }
 
-    const filtered = portfolioData.filter(project =>
+    const filtered = portfolio.filter(project =>
       project.languages.some(
         lang => lang.toLowerCase().includes(inputText)
       )

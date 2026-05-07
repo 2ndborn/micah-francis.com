@@ -23,15 +23,14 @@ const StatementComponent = () => {
             <div style={{paddingLeft: "min(4rem, 5%)", paddingRight: "min(4rem, 5%)", textAlign: 'center', fontSize: "clamp(1rem, 0.909rem + 0.45vw, 1.25rem)"}}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <p style={{textAlign: 'justify'}}>
-                        I’m a full‑stack web developer with a strong foundation
-                        in HTML, CSS, JavaScript, and Python, supported by a Level
-                        5 Diploma from Code Institute. My background in leadership
-                        and customer‑focused roles shapes the way I build digital
-                        products always with clarity, usability, and real human
-                        needs in mind. I enjoy creating clean, purposeful
-                        applications and I’m continually expanding my skills,
-                        currently exploring React and sharpening my
-                        problem‑solving through LeetCode.
+                        I’m a full‑stack web developer who came into tech through curiosity, 
+                        persistence, and a fascination with how people interact with digital 
+                        systems. My background in leadership and customer‑focused roles shapes 
+                        the way I build digital products always with clarity, usability, and 
+                        real human needs in mind. I’m grounded in HTML, CSS, JavaScript, and 
+                        Python, supported by a Level 5 Diploma from Code Institute, and I 
+                        enjoy creating clean, purposeful applications that feel intuitive 
+                        from the first click.
                     </p>
                     
                 </div>
@@ -44,17 +43,23 @@ const StatementComponent = () => {
                             exit={{ opacity: 0, y: -10, transition: { duration: 0.4, ease: "easeIn" } }}
                         >
                             <p style={{textAlign: 'justify', marginTop: 0}}>
-                                Before moving into tech, I spent over a decade in roles
-                                that required communication, coaching, and stakeholder
-                                management experiences that now influence how I approach
-                                development. I’m naturally curious about how systems work
-                                and how people interact with them, which is what led me to
-                                full‑stack development. I’ve built multiple portfolio
-                                projects, including an eCommerce site, community platforms,
-                                and interactive games, each one strengthening my understanding
-                                of both front‑end and back‑end architecture. I’m passionate
-                                about building products that feel intuitive, solve real problems,
-                                and deliver a great user experience.
+                                Before moving into tech, I spent over a decade in people‑management 
+                                roles where I led teams, coached individuals, and handled complex 
+                                customer and stakeholder needs. That experience taught me how to 
+                                communicate clearly, break down problems, and design solutions that 
+                                genuinely help people skills that now influence how I approach 
+                                development.
+                            </p>
+                            <p style={{textAlign: 'justify', marginTop: 0}}>
+                                I’m naturally curious about how systems work and why people use 
+                                them the way they do, which is what drew me to full‑stack 
+                                development. I’ve built a range of portfolio projects from an 
+                                eCommerce site to community platforms and interactive games 
+                                each one strengthening my understanding of both front‑end and 
+                                back‑end architecture. I’m continually expanding my skills, 
+                                exploring React, and sharpening my problem‑solving through LeetCode. 
+                                My goal is simple: build digital experiences that make sense, 
+                                feel good to use, and genuinely solve problems.
                             </p>
                         </motion.div>
                     )}

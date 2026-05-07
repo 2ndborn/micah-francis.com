@@ -13,16 +13,18 @@ const SkillsCard = ({ paused, setPaused }) => {
 
     const attributes = [Object.entries(languageIcons), Object.entries(Skills)]
     const headings = ["Technical Skills", "Transferable Skills"];
+
     const {index: skillsIndex,
          setIndex: setSkillsIndex,
          containerMotion: skillsMotion
       } = useCarouselMotion({
         length: attributes.length,
-        autoDelay: 10000,
+        autoDelay: 15000,
         dragBuffer: 50,
         height: "auto",
         paused
       })
+
     const toggle = (i) => {
         setShowMore(prev => {
             const next = prev === i ? null : i;
@@ -37,7 +39,7 @@ const SkillsCard = ({ paused, setPaused }) => {
     return (
         <section style={{ height: "auto", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
             <h1 style={{ textAlign: "center" }}>Skills & Attributes</h1>
-            <motion.div {...skillsMotion} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+            <motion.div {...skillsMotion}>
                 {attributes.map((att, i) => (
                     <CarouselCard key={i} active={skillsIndex === i} backgroundImage={BACK_IMAGE}>
                         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%", }}>
