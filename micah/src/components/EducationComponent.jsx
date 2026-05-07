@@ -33,13 +33,13 @@ const EducationComponent = ({ paused }) => {
                 <h2>{ed.qualification}</h2>
               </div>
               <div className={styles.facility}>
-                <h4 style={{ margin: 0 }}>{ed.facility}</h4>
+                <h3 style={{ margin: 0 }}>{ed.facility}</h3>
               </div>
               <div className={styles.date}>
-                <h4 style={{ margin: 0 }}>{ed.date}</h4>
+                <h3 style={{ margin: 0 }}>{ed.date}</h3>
               </div>
               <div className={styles.location}>
-                <h4 style={{ margin: 0 }}>{ed.location}</h4>
+                <h3 style={{ margin: 0 }}>{ed.location}</h3>
               </div>
               <div className={styles.desc}>
                 <hr style={{ width: "75%", marginBottom: '3rem' }} />

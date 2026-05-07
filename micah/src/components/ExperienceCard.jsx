@@ -39,7 +39,7 @@ const ExperienceCard = ({ paused, setPaused }) => {
                     <CarouselCard key={i} active={expIndex === i} backgroundImage={BACK_IMAGE}>
                         <div style={{ display: "grid", gridTemplateRows: "auto 1fr", alignItems: 'start', height: "100%", width: "100%" }}>
                             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, marginTop: "2rem" }}>
-                                <h1 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))", color: 'rgb(118, 58, 117)' }}>{ex.company}</h1>
+                                <h1 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem))", color: 'rgb(118, 58, 117)', textAlign: 'center' }}>{ex.company}</h1>
                             </div>
                             <div style={{
                                 display: "flex",
@@ -50,10 +50,10 @@ const ExperienceCard = ({ paused, setPaused }) => {
                             }}>
 
                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, borderRight: "2px solid var(--headfour-color)" }}>
-                                    <h3 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.role}</h3>
+                                    <h2 style={{ margin: 0, fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)", textAlign: 'center' }}>{ex.role}</h2>
                                 </div>
                                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-                                    <h3 style={{ margin: 0, fontSize: "clamp(0.75rem, 0.477rem + 1.36vw, 1.5rem)" }}>{ex.dates}</h3>
+                                    <h2 style={{ margin: 0, fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)", textAlign: 'center' }}>{ex.dates}</h2>
                                 </div>
                             </div>
 
