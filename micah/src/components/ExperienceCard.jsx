@@ -58,7 +58,14 @@ const ExperienceCard = ({ paused, setPaused }) => {
                             </div>
 
                             <motion.div
-                                style={{ boxSizing: "border-box", paddingLeft: "min(3rem,3%)", paddingRight: "min(3rem,3%)", marginBottom: "4rem" }}>
+                                style={{
+                                    display: "flex", 
+                                    justifyContent: 'center', 
+                                    alignItems: "center", 
+                                    boxSizing: "border-box", 
+                                    paddingLeft: "min(3rem,3%)", 
+                                    paddingRight: "min(3rem,3%)", 
+                                    minHeight: "200px" }}>
                                 <ul>
                                     {ex.achievements.slice(0, 3).map((ach) => (
                                         <li key={ach} style={{ fontSize: "clamp(1rem, 0.818rem + 0.91vw, 1.5rem)" }}>{ach}</li>
@@ -79,7 +86,8 @@ const ExperienceCard = ({ paused, setPaused }) => {
                                             ))}
                                     </AnimatePresence>
                                 </ul>
-                                <div style={{ display: "flex", justifyContent: "center" }}>
+                            </motion.div>
+                                <div style={{ display: "flex", justifyContent: "center", margin: '2rem 0' }}>
                                     {ex.achievements.length > 3 && (
                                         <button 
                                             onClick={() => toggle(i)}
@@ -90,7 +98,6 @@ const ExperienceCard = ({ paused, setPaused }) => {
                                         </button>
                                     )}
                                 </div>
-                            </motion.div>
                         </div>
                     </CarouselCard>
                 ))}

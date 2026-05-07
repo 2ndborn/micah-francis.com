@@ -77,17 +77,15 @@ export const ExperienceData = [
             customers.`,
         ]
     },
-    // {
-    //     id: 4,
-    //     company: "Manager",
-    //     role: "Metro Bank",
-    //     dates: "Mar 2018 - Sep 2021",
-    //     achievements: [
-    //         ``,
-    //         ``,
-    //         ``,
-    //         ``,
-    //         ``,
-    //     ]
-    // },
-]
+    {
+        id: 4,
+        company: "Branch Manger",
+        role: "NatWest Bank",
+        dates: "Aug 2015 - Sep 2017",
+        achievements: [
+            `Introduced a 3-Stage Sales Structure, increasing mortgage sales by 60%.`,
+            `Drove a 60% YoY increase in Current Account Switcher acquisitions.`,
+            `Organized "Ways to Bank" events with Southwark Council, raising footfall and sales.`,
+            `Elevated customer satisfaction by 5% YoY using tailored service strategie`,
+        ]
+    },]
