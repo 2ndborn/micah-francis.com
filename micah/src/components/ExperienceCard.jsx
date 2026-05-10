@@ -87,17 +87,17 @@ const ExperienceCard = ({ paused, setPaused }) => {
                                     </AnimatePresence>
                                 </ul>
                             </motion.div>
-                                <div style={{ display: "flex", justifyContent: "center", margin: '2rem 0' }}>
-                                    {ex.achievements.length > 3 && (
-                                        <button 
-                                            onClick={() => toggle(i)}
-                                            className={styles.ctaBtn}
-                                            aria-label={showMore !== i ? "Show more content" : "Show less content"}
-                                        >
-                                            {showMore !== i ? "See more" : "See less"}
-                                        </button>
-                                    )}
-                                </div>
+                            <div style={{ display: "flex", justifyContent: "center", margin: '2rem 0' }}>
+                                {ex.achievements.length > 3 && (
+                                    <button 
+                                        onClick={() => toggle(i)}
+                                        className={styles.ctaBtn}
+                                        aria-label={showMore !== i ? "Show more content" : "Show less content"}
+                                    >
+                                        {showMore !== i ? "See more" : "See less"}
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </CarouselCard>
                 ))}

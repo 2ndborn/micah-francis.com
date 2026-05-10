@@ -83,9 +83,9 @@ export const ExperienceData = [
         role: "NatWest Bank",
         dates: "Aug 2015 - Sep 2017",
         achievements: [
-            `Introduced a 3-Stage Sales Structure, increasing mortgage sales by 60%.`,
-            `Drove a 60% YoY increase in Current Account Switcher acquisitions.`,
-            `Organized "Ways to Bank" events with Southwark Council, raising footfall and sales.`,
-            `Elevated customer satisfaction by 5% YoY using tailored service strategie`,
+            `Introduced a scalable three‑stage sales framework that increased mortgage sales by 60%.`,
+            `Led initiatives that delivered a 60% YoY uplift in Current Account Switcher acquisitions.`,
+            `Partnered with Southwark Council to deliver ‘Ways to Bank’ events, increasing community engagement and driving product growth.`,
+            `Enhanced customer satisfaction by 5% YoY through targeted service improvements and coaching interventions.`,
         ]
     },]

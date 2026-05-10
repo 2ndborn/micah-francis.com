@@ -8,7 +8,6 @@ const InfiniteScroll = ({ icons, paragraph, button, x = "-100%", link='/default'
     const inView = useInView(ref, {once: false, amount: 0.3});
     const mainControls = useAnimation();
     const contentControls = useAnimation();
-    const MotionLink = motion(Link)
 
     const container = {
         hidden: { opacity: 0, x: x },
