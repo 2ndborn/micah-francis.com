@@ -5,6 +5,7 @@ import ExperienceCard from '../components/ExperienceCard';
 import SkillsCard from '../components/SkillsCard';
 import EducationComponent from '../components/EducationComponent';
 import StatementComponent from '../components/StatementComponent';
+import Reveal from '../utils/Reveal';
 
 
 const AboutMe = () => {
@@ -34,13 +35,21 @@ const AboutMe = () => {
       >
         <h1 style={{marginLeft: "2rem", fontSize: 'clamp(2rem, 1.636rem + 1.82vw, 3rem)'}}>About Me</h1>
       </section>
-      <StatementComponent />
-      <hr style={{width: "90%", marginTop: "3rem"}}/>
-      <EducationComponent paused={isPaused} setPaused={setIsPaused} />
-      <hr style={{width: "50%", marginTop: "3rem", marginBottom: '2rem'}}/>
-      <SkillsCard paused={isPaused} setPaused={setIsPaused} />
-      <hr style={{width: "50%", marginTop: "3rem", marginBottom: '0.5rem'}}/>
-      <ExperienceCard paused={isPaused} setPaused={setIsPaused} />
+      <Reveal>
+        <StatementComponent />
+        <hr style={{width: "90%", marginTop: "3rem"}}/>
+      </Reveal>
+      <Reveal>
+        <EducationComponent paused={isPaused} setPaused={setIsPaused} />
+        <hr style={{width: "50%", marginTop: "3rem", marginBottom: '2rem'}}/>
+      </Reveal>
+      <Reveal>
+        <SkillsCard paused={isPaused} setPaused={setIsPaused} />
+        <hr style={{width: "50%", marginTop: "3rem", marginBottom: '0.5rem'}}/>
+      </Reveal>
+      <Reveal>
+        <ExperienceCard paused={isPaused} setPaused={setIsPaused} />
+      </Reveal>
     </motion.div>
   )
 }

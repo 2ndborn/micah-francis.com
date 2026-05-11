@@ -1,29 +1,35 @@
-import React, { useRef } from 'react'
-import {motion, useScroll, useTransform} from 'framer-motion';
-import styles from '../styles/HomePage.module.css';
+import React, { useEffect, useRef } from 'react'
+import {motion, useAnimation, useInView} from 'framer-motion';
 
 
 const Reveal = ({children}) => {
-    const targetRef = useRef(null)
-      const {scrollYProgress} = useScroll({
-        target: targetRef,
-        offset: ["end end", "end start"]
-      });
-    
-      const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
-      const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+    const ref = useRef(null);
+    const inView = useInView(ref, {once: true, amount: 0.2});
+    const mainControls = useAnimation();
 
-  return (
-      <div>
-          <motion.div ref={targetRef} style={{scale, height: "150vh", display: "flex", justifyContent: "center", margin: "100px 0" }}>
-              <motion.div style={{ position: "sticky", top: 60, height: "75vh", width: "75vw", overflow: "hidden" }}>
-                  <motion.div style={{opacity}} className={styles.scrollContainer}>
-                      {children}
-                  </motion.div>
-              </motion.div>
-          </motion.div>
-      </div>
-  )
+    useEffect(() => {
+        if(inView){
+            mainControls.start('visible')
+        }
+    }, [inView, mainControls])
+
+    const variants = {
+        hidden: {opacity: 0, y: 75},
+        visible: {opacity: 1, y: 0}
+    }
+    return (
+        <div>
+            <motion.div
+                ref={ref}
+                variants={variants}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.75, ease: 'easeIn' }}
+            >
+                {children}
+            </motion.div>
+        </div>
+    )
 }
 
 export default Reveal
