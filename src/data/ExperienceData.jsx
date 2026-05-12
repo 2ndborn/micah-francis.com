@@ -2,7 +2,7 @@ export const ExperienceData = [
     {
         id: 1,
         company: "Civil Service",
-        role: "Executive Officer",
+        role: "Deputy Team Leader",
         dates: "Jan 2024 - Present",
         achievements: [
             `Recognised for driving childcare cost‑support adoption, 
@@ -18,6 +18,10 @@ export const ExperienceData = [
             `Improved annual People Survey results by fostering a 
             multicultural working environment, celebrating the 
             achievements of all heritages on a monthly basis.`,
+            `Provide tailored guidance and case management to a 
+            diverse caseload of 189 individuals, using coaching, 
+            rapport building, and structured planning to drive 
+            positive outcomes.`
         ]
     },
     {

@@ -6,6 +6,7 @@ import SkillsCard from '../components/SkillsCard';
 import EducationComponent from '../components/EducationComponent';
 import StatementComponent from '../components/StatementComponent';
 import Reveal from '../utils/Reveal';
+import SpeechBubble from '../components/SpeechBubble';
 
 
 const AboutMe = () => {
@@ -26,6 +27,7 @@ const AboutMe = () => {
       initial='hidden'
       animate='show'
     >
+      <SpeechBubble />
       <section style={{
         height: "25vh", 
         display: "flex", 

@@ -103,7 +103,7 @@ const PortCarousel = ({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          fontSize: "1.5rem",
+          fontSize: "clamp(1.3rem, 1.227rem + 0.36vw, 1.5rem)",
           color: "#884587"
         }}>
           {description}

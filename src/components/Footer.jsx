@@ -15,11 +15,12 @@ const Footer = () => {
     }
     return (
         <motion.div
+        id='contact-detail'
         variants={container}
         initial="hidden"
         whileInView="show"
         className={styles.footerContainer}>
-            <h2 style={{ textAlign: "center" }}>Contact</h2>
+            <h2 style={{ textAlign: "center" }}>Contact me</h2>
             <div className={styles.upperFooter}>
                 <a
                     href='https://wa.me/447958774171?text=Hi%20Micah'
