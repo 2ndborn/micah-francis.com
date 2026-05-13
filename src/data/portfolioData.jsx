@@ -17,7 +17,10 @@ export const portfolioData = [
         {
             id: 1,
             name: "Hair is art",
-            description: "The goal of the Hair is Art website is to showcase the talents and abilities of Kara Francis to attract the attention of prospective employers who are in need of her services.",
+            description: `The goal of the Hair is Art website is to 
+            showcase the talents and abilities of Kara Francis to 
+            attract the attention of prospective employers who are in 
+            need of her services.`,
             website: "https://2ndborn.github.io/HairIsArt/",
             github: "https://github.com/2ndborn/HairIsArt",
             languages: ["HTML", "CSS", "JavaScript"],
@@ -30,7 +33,9 @@ export const portfolioData = [
         {
             id: 2,
             name: "Slots",
-            description: "Slots is a memory game that encourages the user to remember a temporarily shown sequence of numbers. The user must key the numbers in the exact sequence that they appeared.",
+            description: `Slots is a memory game that encourages the user 
+            to remember a temporarily shown sequence of numbers. The user 
+            must key the numbers in the exact sequence that they appeared.`,
             website: "https://2ndborn.github.io/slots-project/",
             github: "https://github.com/2ndborn/slots-project",
             languages: ["HTML", "CSS", "JavaScript"],
@@ -43,7 +48,9 @@ export const portfolioData = [
         {
             id: 3,
             name: "M-Books",
-            description: "M.Books is a web application designed that enables its users to search for Japanese Manga comic that they would like to read.",
+            description: `M.Books is a web application designed that 
+            enables its users to search for Japanese Manga comic that 
+            they would like to read.`,
             website: "https://m-books-7jir.onrender.com/",
             github: "https://github.com/2ndborn/m-books",
             languages: ["HTML", "CSS", "JavaScript", "Python", "MaterializeCSS", "Flask", "MongoDB"],
@@ -56,10 +63,16 @@ export const portfolioData = [
         {
             id: 4,
             name: "Shift",
-            description: "Slots is a memory game that encourages the user to remember a temporarily shown sequence of numbers. The user must key the numbers in the exact sequence that they appeared.",
+            description: `Shift is a web application designed to bring 
+            users together through a dedicated fitness community. 
+            Subscribers can access and purchase tailored exercise and 
+            meal plans, explore a range of gym equipment and apparel, 
+            and connect with one another through an integrated social 
+            network that enables communication and community engagement.`,
             website: "https://web-production-402df.up.railway.app/",
             github: "https://github.com/2ndborn/shift",
-            languages: ["HTML", "CSS", "JavaScript", "Python", "Bootstrap", "Django", "PostgresSQL"],
+            languages: ["HTML", "CSS", "JavaScript", "Python", 
+                "Bootstrap", "Django", "PostgresSQL"],
             image: shift,
             imageAlt: "Shift website image",
             thumb: shiftThumb,
@@ -99,9 +112,9 @@ export const portfolioData = [
         {
             id: 7,
             name: "Kara Haircare",
-            description: `A website designed to clearly showcase the hair 
-            services offered, helping support business growth and reach 
-            new clients.`,
+            description: `A website crafted to highlight the owner’s expertise 
+            and accomplishments, showcase available hair services, and expand 
+            the business by connecting with new clients.`,
             website: "https://karahaircare.co.uk/",
             github: "https://github.com/2ndborn/karahair",
             languages: ["HTML", "CSS", "JavaScript"],
