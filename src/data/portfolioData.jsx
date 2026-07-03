@@ -12,6 +12,8 @@ import darthside from '../assets/darthside.webp';
 import darth_thumb from '../assets/darth_thumb.webp';
 import karahair from '../assets/karahair.webp';
 import karahair_thumb from '../assets/karahair_thumb.webp';
+import augustusImg from '../assets/augustusImg.webp';
+import augustusThumb from '../assets/augustusThumb.webp';
 
 export const portfolioData = [
         {
@@ -117,11 +119,26 @@ export const portfolioData = [
             the business by connecting with new clients.`,
             website: "https://karahaircare.co.uk/",
             github: "https://github.com/2ndborn/karahair",
-            languages: ["HTML", "CSS", "JavaScript"],
+            languages: ["HTML", "CSS", "JavaScript", "React", "Framer"],
             image: karahair,
             imageAlt: "Kara Haircare website image",
             thumb: karahair_thumb,
             thumbAlt: "Kara Haircare website thumbnail and link to site",
+            backgroundImage: "top center"
+        },
+        {
+            id: 8,
+            name: "Augustus Finishing Co.",
+            description: `A website designed to highlight the owner’s professional 
+            expertise while presenting plastering and painting services that appeal 
+            to new clients.`,
+            website: "https://2ndborn.github.io/plasterer/",
+            github: "https://github.com/2ndborn/plasterer",
+            languages: ["HTML", "CSS", "JavaScript", "React", "Framer"],
+            image: augustusImg,
+            imageAlt: "Augustus Finishing Co. website image",
+            thumb: augustusThumb,
+            thumbAlt: "Augustus Finishing Co. website thumbnail and link to site",
             backgroundImage: "top center"
         },
     ]

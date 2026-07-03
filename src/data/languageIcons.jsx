@@ -16,6 +16,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiReactbootstrap } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
+import { SiFramer } from "react-icons/si";
 
 export const languageIcons = {
     HTML: FaHtml5,
@@ -33,4 +34,5 @@ export const languageIcons = {
     PostgresSQL: BiLogoPostgresql,
     MongoDB: SiMongodb,
     Node: FaNode,
+    Framer: SiFramer,
 }
