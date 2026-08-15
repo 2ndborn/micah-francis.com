@@ -14,6 +14,8 @@ import karahair from '../assets/karahair.webp';
 import karahair_thumb from '../assets/karahair_thumb.webp';
 import augustusImg from '../assets/augustusImg.webp';
 import augustusThumb from '../assets/augustusThumb.webp';
+import zenImage from '../assets/zen_image.webp';
+import zenThumb from '../assets/zen_thumb.webp';
 
 export const portfolioData = [
         {
@@ -140,5 +142,19 @@ export const portfolioData = [
             thumb: augustusThumb,
             thumbAlt: "Augustus Finishing Co. website thumbnail and link to site",
             backgroundImage: "top center"
+        },
+        {
+            id: 9,
+            name: "Zen Prep",
+            description: `A website I designed for my daughter to support her revision
+            in additional to school studies.`,
+            website: "https://2ndborn.github.io/amelia-quiz/",
+            github: "https://github.com/2ndborn/amelia-quiz",
+            languages: ["HTML", "CSS", "JavaScript"],
+            image: zenImage,
+            imageAlt: "Zen Prep website image",
+            thumb: zenThumb,
+            thumbAlt: "Zen Prep website thumbnail and link to site",
+            backgroundImage: "center center"
         },
     ]
