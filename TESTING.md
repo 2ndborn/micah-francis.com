@@ -4,17 +4,17 @@ Visit the deployed site: [micah-francis.com](https://2ndborn.github.io/micah-fra
 ## AUTOMATED TESTING
 ### W3C Validator
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
-* [Home page](./docs/assets/validator.w3.org_nu_home.webp) - Error aren't fixable because of the React Single Page Application.
-* [About me page](./docs/assets/validator.w3.org_nu_aboutme.webp) - Error aren't fixable because of the React Single Page Application.
-* [Portfolio page](./docs/assets/validator.w3.org_nu_portfolio.webp) - Error aren't fixable because of the React Single Page Application.
-* [404 error page](./docs/assets/validator.w3.org_nu_404.png)
-* [App.css](./docs/assets/validator.w3.org_nu_app.css.webp)
-* [Index.css](./docs/assets/validator.w3.org_nu_index.css.webp)
-* [Home.css](./docs/assets/validator.w3.org_nu_home.css.webp)
-* [Aboutme.css](./docs/assets/validator.w3.org_nu_aboutme.css.webp)
-* [Portfolio.css](./docs/assets/validator.w3.org_nu_portfolio.css.webp)
-* [Navbar.css](./docs/assets/validator.w3.org_nu_navbar.css.webp)
-* [Footer.css](./docs/assets/validator.w3.org_nu_footer.css.webp)
+* [Home page](./readme-assets/assets/validator.w3.org_nu_home.webp) - Error aren't fixable because of the React Single Page Application.
+* [About me page](./readme-assets/assets/validator.w3.org_nu_aboutme.webp) - Error aren't fixable because of the React Single Page Application.
+* [Portfolio page](./readme-assets/assets/validator.w3.org_nu_portfolio.webp) - Error aren't fixable because of the React Single Page Application.
+* [404 error page](./readme-assets/assets/validator.w3.org_nu_404.png)
+* [App.css](./readme-assets/assets/validator.w3.org_nu_app.css.webp)
+* [Index.css](./readme-assets/assets/validator.w3.org_nu_index.css.webp)
+* [Home.css](./readme-assets/assets/validator.w3.org_nu_home.css.webp)
+* [Aboutme.css](./readme-assets/assets/validator.w3.org_nu_aboutme.css.webp)
+* [Portfolio.css](./readme-assets/assets/validator.w3.org_nu_portfolio.css.webp)
+* [Navbar.css](./readme-assets/assets/validator.w3.org_nu_navbar.css.webp)
+* [Footer.css](./readme-assets/assets/validator.w3.org_nu_footer.css.webp)
 ### **Performance & Accessibility Testing**
 
 This project was evaluated using **Google Lighthouse** to ensure strong performance, accessibility, best practices, and SEO. The site achieved high scores across all categories, confirming that it is fast, accessible, and built following modern web standards.

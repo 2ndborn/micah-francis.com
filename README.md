@@ -191,7 +191,7 @@ By adding an amount I could ensure that that animation won't fire until 30% of t
 By requiring 30% of the element to be visible before triggering the animation, the overflow issue was resolved and the animation now fires at the correct time.
 
 ## TESTING
-Click here to view [Tests](../micah/TESTING.md)
+Click here to view [Tests](./TESTING.md)
 
 ## LOCAL DEVELOPMENT
 ### Clone Repository
