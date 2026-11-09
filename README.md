@@ -47,7 +47,7 @@ ___
 ## Wireframes
 | Home | About me | Portfolio |
 |---|---|---|
-|![Home](./docs/assets/home.webp)|![About](./docs/assets/about.webp)|![Portfolio](./docs/assets/portfolio.webp)|
+|![Home](./readme-assets/assets/home.webp)|![About](./readme-assets/assets/about.webp)|![Portfolio](./readme-assets/assets/portfolio.webp)|
 ## Technologies
 ### `Resources`
 * HTML
